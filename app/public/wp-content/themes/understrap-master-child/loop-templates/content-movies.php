@@ -2,12 +2,13 @@
 
 $args = [
   'post_type' 		 => 'movie',
-  'posts_per_page' => 6,
-  'order'          => 'DESC'
+  'posts_per_page' => 10,
+  'orderby'        => 'title',
+  'order'          => 'ASC'
 ];
 $topRatedQuery = new WP_Query( $args );
 ?>
-<h1>All movies</h1>
+<h1>All movies (A-Z)</h1>
 <div class="movies">
 <?php
 if ($topRatedQuery -> have_posts() ) :

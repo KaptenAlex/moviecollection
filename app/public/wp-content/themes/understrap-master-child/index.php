@@ -33,13 +33,8 @@ $container = get_theme_mod( 'understrap_container_type' );
 			<?php get_template_part( 'global-templates/left-sidebar-check' ); ?>
 
 			<main class="site-main" id="main">
-
 				<?php get_template_part( 'loop-templates/content', 'topratedmovies' ); ?>
-				
-						<?php get_template_part( 'loop-templates/content', 'movies' ); ?>
-
-
-
+				<?php get_template_part( 'loop-templates/content', 'movies' ); ?>
 			</main><!-- #main -->
 
 			<!-- The pagination component -->

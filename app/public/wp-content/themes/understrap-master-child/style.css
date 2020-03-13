@@ -6,14 +6,36 @@
  Version:      1.0.0
  Text Domain:  understrap-master-child
 */
-
+p,h1,h2,h3,h4,h5,h6,.kksr-legend,.site-info,.entry-meta {
+  color: azure;
+}
+a {
+  color: #53f;
+}
 .top-rated-movies, .movies {
   display: grid;
   grid-template-rows: auto;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 }
 
-.movie {
+.movie-box {
+  border: 1px solid red;
   display: grid;
   grid-column: 1fr;
+  margin: 15px 10px 15px 10px;
+  padding: 10px 10px 10px 10px;
+  background-color: #800000;
+}
+
+.movie-image {
+  width: 100%;
+  z-index: 0;
+}
+
+.movie-link {
+  color: #000000;
+}
+
+.movie-link:hover {
+  color: #ffffff;
 }

@@ -3,9 +3,9 @@
 $args = [
   'post_type' 		 => 'movie',
   'posts_per_page' => 5,
-  'meta_key' => '_kksr_ratings',
-  'orderby' => 'meta_value_num',
-  'order' => 'DESC'
+  'meta_key'       => '_kksr_avg',
+  'orderby'        => 'meta_value_num',
+  'order'          => 'DESC'
 ];
 $topRatedQuery = new WP_Query( $args );
 ?>
@@ -16,13 +16,14 @@ if ($topRatedQuery -> have_posts() ) :
   $iteration = 0;
   while ($topRatedQuery -> have_posts() ) : $topRatedQuery -> the_post();
   $iteration++; ?>
-    <div class="movie">
+    <div class="movie-box">
       <h2><?php echo $iteration . '.'; ?></h2>
-      <img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="Movie image">
+      <br>
+      <img class="movie-image" src="<?php echo get_the_post_thumbnail_url(); ?>" alt="Movie image">
       <a href="<?php echo get_post_permalink(); ?>">
-        <h4><?php echo get_the_title(); ?></h4>
+        <h4 class="movie-link"><?php echo get_the_title(); ?></h4>
       </a>
-      <p>Rating: <?php echo get_post_meta(get_the_ID(), '_kksr_ratings', true) ?></p>
+      <p>Rating: <?php echo round(get_post_meta(get_the_ID(), '_kksr_avg', true), 1); ?></p>
     </div>
     <?php
   endwhile;

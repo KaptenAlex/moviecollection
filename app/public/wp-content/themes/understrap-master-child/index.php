@@ -34,7 +34,25 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 			<main class="site-main" id="main">
 
-				<?php if ( have_posts() ) : ?>
+				<?php
+				$args = [
+					'post_type' 		 => 'movie',
+					'posts_per_page' => 3,
+					'orderby'				 => 'ASC',
+				];
+				$topRatedQuery = new WP_Query( $args );
+				if ($topRatedQuery -> have_posts() ) :
+					while ($topRatedQuery -> have_posts() ) : $topRatedQuery -> the_post(); ?>
+						<div class="movie">
+							<img src="<?php get_the_post_thumbnail(); ?>" alt="Movie image">
+							<h4><?php get_the_title(); ?></h4>
+							<p></p>
+						</div>
+						<?php
+					endwhile;
+					wp_reset_postdata();
+				endif;
+				if ( have_posts() ) : ?>
 
 					<?php /* Start the Loop */ ?>
 

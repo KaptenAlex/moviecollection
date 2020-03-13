@@ -6,3 +6,14 @@
  Version:      1.0.0
  Text Domain:  understrap-master-child
 */
+
+.top-rated-movies {
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.movie {
+  display: grid;
+  grid-column: 1fr;
+}

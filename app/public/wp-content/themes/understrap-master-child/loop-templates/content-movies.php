@@ -2,7 +2,7 @@
 
 $args = [
   'post_type' 		 => 'movie',
-  'posts_per_page' => 10,
+  'posts_per_page' => -1,
   'orderby'        => 'title',
   'order'          => 'ASC'
 ];

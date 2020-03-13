@@ -7,7 +7,7 @@
  Text Domain:  understrap-master-child
 */
 
-.top-rated-movies {
+.top-rated-movies, .movies {
   display: grid;
   grid-template-rows: auto;
   grid-template-columns: 1fr 1fr 1fr;

@@ -9,7 +9,7 @@ $args = [
 ];
 $topRatedQuery = new WP_Query( $args );
 ?>
-<h1>Top 10 rated movies</h1>
+<h1>Top 5 rated movies</h1>
 <div class="top-rated-movies">
 <?php
 if ($topRatedQuery -> have_posts() ) :
@@ -27,6 +27,7 @@ if ($topRatedQuery -> have_posts() ) :
     <?php
   endwhile;
   wp_reset_postdata();
-endif;
-?>
+  else : ?>
+    <?php get_template_part( 'loop-templates/content', 'none' ); ?>
+<?php endif; ?>
 </div>

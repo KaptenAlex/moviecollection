@@ -38,4 +38,10 @@ a {
 
 .movie-link:hover {
   color: #ffffff;
+  text-decoration: underline;
+  text-decoration-color: #ffffff;
+}
+
+.entry-content {
+  font-size: 1.125rem;
 }

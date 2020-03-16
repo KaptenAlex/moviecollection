@@ -9,9 +9,11 @@
 p,h1,h2,h3,h4,h5,h6,.kksr-legend,.site-info,.entry-meta {
   color: azure;
 }
+
 a {
   color: #53f;
 }
+
 .top-rated-movies, .movies {
   display: grid;
   grid-template-rows: auto;
@@ -44,4 +46,8 @@ a {
 
 .entry-content {
   font-size: 1.125rem;
+}
+
+#main-nav {
+  background-color: #800000 !important;
 }

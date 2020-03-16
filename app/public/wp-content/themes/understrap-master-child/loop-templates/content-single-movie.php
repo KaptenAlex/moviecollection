@@ -20,9 +20,16 @@ defined( 'ABSPATH' ) || exit;
 	<?php echo get_the_post_thumbnail( $post->ID, 'large' ); ?>
 
 	<div class="entry-content">
-
+		<div class="published">
+			<h2>Published</h2>
+		</div>
+		<div class="actors">
+			<h2>Actors</h2>
+		</div>
+		<div class="synopsis">
+			<h1>Synopsis</h1>
 		<?php the_content(); ?>
-
+		</div>
 		<?php
 		wp_link_pages(
 			array(

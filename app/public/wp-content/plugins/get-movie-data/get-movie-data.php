@@ -32,3 +32,12 @@ function update_movie_title_and_content($post_id)
   add_action('save_post', 'update_movie_title_and_content');
 }
 add_action('save_post', 'update_movie_title_and_content');
+
+function update_actor_and_published_metadata($post_id)
+{
+  $movie = get_movie_information($post_id);
+
+  update_post_meta( $post_id, '_movie_actors', $movie->Actors);
+  update_post_meta( $post_id, '_movie_published', $movie->Released);
+}
+add_action('save_post', 'update_actor_and_published_metadata');

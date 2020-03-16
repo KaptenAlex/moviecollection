@@ -5,9 +5,9 @@ G
 
 - Siten ska ha ett lämpligt tema. Eget eller färdigt spelar ingen roll.
 - [x] Det ska finnas en Movie-cpt som ska skapas i ett eget plugin.
-- [x]  Varje film ska ha ett eget fält (Custom Meta Box) där användaren kan fylla i IMDb-id för filmen och spara det. För filmen https://www.imdb.com/title/tt3896198/ är id:t alltså tt3896198.
+- [x] Varje film ska ha ett eget fält (Custom Meta Box) där användaren kan fylla i IMDb-id för filmen och spara det. För filmen https://www.imdb.com/title/tt3896198/ är id:t alltså tt3896198.
 - [x]  Användaren ska kunna rejta filmer, antingen via egen eller tredjepartsplugin.
-- Siten ska kunna visa de högst rejtade filmerna på förstasidan. Det spelar ingen roll om man gör det som en arkivsida eller widget.
+- [x] Siten ska kunna visa de högst rejtade filmerna på förstasidan. Det spelar ingen roll om man gör det som en arkivsida eller widget.
 
 VG
 

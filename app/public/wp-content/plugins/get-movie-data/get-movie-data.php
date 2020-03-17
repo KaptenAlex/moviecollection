@@ -16,20 +16,23 @@ function get_movie_information($post_id)
   return $movie_information;
 }
 
-function update_movie_title_and_content($post_id)
+function update_movie_title_and_content( $post_id )
 {
-  $movie = get_movie_information($post_id);
-  $movie_title = $movie->Title;
-  $movie_plot = $movie->Plot;
+  $movie = get_movie_information( $post_id );
+  $movie_title = sanitize_text_field( $movie->Title );
+  $movie_plot = sanitize_text_field( $movie->Plot );
 
   $update_movie = [
     'ID'            => $post_id,
     'post_title'    => $movie_title,
     'post_content'  => $movie_plot,
   ];
-  remove_action('save_post', 'update_movie_title_and_content');
-  wp_update_post( $update_movie );
-  add_action('save_post', 'update_movie_title_and_content');
+  $IMDB_id = sanitize_text_field( $_POST["_imdb_id"] );
+  if ( !empty( $IMDB_id ) ) :
+    remove_action('save_post', 'update_movie_title_and_content');
+    wp_update_post( $update_movie );
+    add_action('save_post', 'update_movie_title_and_content');
+  endif;
 }
 add_action('save_post', 'update_movie_title_and_content');
 
@@ -37,7 +40,19 @@ function update_actor_and_published_metadata($post_id)
 {
   $movie = get_movie_information($post_id);
 
-  update_post_meta( $post_id, '_movie_actors', $movie->Actors);
-  update_post_meta( $post_id, '_movie_published', $movie->Released);
+  $IMDB_id = sanitize_text_field( $_POST["_imdb_id"] );
+  $IMDB_date = sanitize_text_field( $_POST["_movie_published"] );
+  $IMDB_actors = sanitize_text_field( $_POST["_movie_actors"] );
+
+  $movie_released = sanitize_text_field( $movie->Released );
+  $movie_actors = sanitize_text_field( $movie->Actors );
+  $movie_imdb_ID = sanitize_text_field( $movie->imdbID );
+  
+  if ( !empty( $IMDB_id ) || $IMDB_id != $movie_imdb_ID ) :
+    if ($IMDB_date != $movie_released || $IMDB_actors != $movie_actors ) :
+      update_post_meta( $post_id, '_movie_actors', $movie_actors );
+      update_post_meta( $post_id, '_movie_published', $movie_released );
+    endif;
+  endif;
 }
-add_action('save_post', 'update_actor_and_published_metadata');
+add_action( 'save_post', 'update_actor_and_published_metadata' );

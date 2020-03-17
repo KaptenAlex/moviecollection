@@ -4,15 +4,16 @@ $args = [
   'post_type' 		 => 'movie',
   'posts_per_page' => -1,
   'orderby'        => 'title',
-  'order'          => 'ASC'
+  'order'          => 'ASC',
 ];
-$topRatedQuery = new WP_Query( $args );
+
+$moviesQuery = new WP_Query( $args );
 ?>
 <h1>All movies (A-Z)</h1>
 <div class="movies">
 <?php
-if ($topRatedQuery -> have_posts() ) :
-  while ($topRatedQuery -> have_posts() ) : $topRatedQuery -> the_post();
+if ($moviesQuery -> have_posts() ) :
+  while ($moviesQuery -> have_posts() ) : $moviesQuery -> the_post();
   $rating = round(get_post_meta(get_the_ID(), '_kksr_avg', true), 1); ?>
     <div class="movie-box">
       <img class="movie-image" src="<?php echo get_the_post_thumbnail_url(); ?>" alt="Movie image">
@@ -30,9 +31,9 @@ if ($topRatedQuery -> have_posts() ) :
       </p>
     </div>
     <?php
-  endwhile;
-  wp_reset_postdata();
-  else : ?>
-    <?php get_template_part( 'loop-templates/content', 'none' ); ?>
-<?php endif; ?>
+    endwhile;
+      wp_reset_postdata();
+      else :
+        get_template_part( 'loop-templates/content', 'none' );
+      endif; ?>
 </div>

@@ -18,10 +18,10 @@ if ($topRatedQuery -> have_posts() ) :
       <img class="movie-image" src="<?php echo get_the_post_thumbnail_url(); ?>" alt="Movie image">
       <a href="<?php echo get_post_permalink(); ?>">
         <h4 class="movie-link"><?php echo get_the_title(); ?></h4>
-        <?php if (!empty(get_post_meta(get_the_ID(), '_imdb_id', true))) : ?>
-          <div class="imdb-icon"></div>
-        <?php endif; ?>
       </a>
+      <?php if (!empty(get_post_meta(get_the_ID(), '_imdb_id', true))) : ?>
+        <div class="imdb-icon"></div>
+      <?php endif; ?>
       <p>Rating:
       <?php
       $ratedOrNot = empty($rating) ? 'No rating yet' : $rating;

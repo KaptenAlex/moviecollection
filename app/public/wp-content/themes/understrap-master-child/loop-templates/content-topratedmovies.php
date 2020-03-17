@@ -23,6 +23,9 @@ if ($topRatedQuery -> have_posts() ) :
       <a href="<?php echo get_post_permalink(); ?>">
         <h4 class="movie-link"><?php echo get_the_title(); ?></h4>
       </a>
+      <?php if (!empty(get_post_meta(get_the_ID(), '_imdb_id', true))) : ?>
+        <div class="imdb-icon"></div>
+      <?php endif; ?>
       <p>Rating: <?php echo round(get_post_meta(get_the_ID(), '_kksr_avg', true), 1); ?></p>
     </div>
     <?php

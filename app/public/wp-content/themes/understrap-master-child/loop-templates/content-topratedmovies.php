@@ -13,11 +13,8 @@ $topRatedQuery = new WP_Query( $args );
 <div class="top-rated-movies">
 <?php
 if ($topRatedQuery -> have_posts() ) :
-  $iteration = 0;
-  while ($topRatedQuery -> have_posts() ) : $topRatedQuery -> the_post();
-  $iteration++; ?>
+  while ($topRatedQuery -> have_posts() ) : $topRatedQuery -> the_post(); ?>
     <div class="movie-box">
-      <h2><?php echo $iteration . '.'; ?></h2>
       <?php $movie_poster = esc_url( get_post_meta( $post->ID, '_movie_poster', true ) ); ?>
       <img class="movie-image" src="<?php echo $movie_poster ?>" alt="Movie image">
       <a href="<?php echo get_post_permalink(); ?>">

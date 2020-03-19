@@ -18,7 +18,6 @@ if ($topRatedQuery -> have_posts() ) :
   $iteration++; ?>
     <div class="movie-box">
       <h2><?php echo $iteration . '.'; ?></h2>
-      <br>
       <?php $movie_poster = esc_url( get_post_meta( $post->ID, '_movie_poster', true ) ); ?>
       <img class="movie-image" src="<?php echo $movie_poster ?>" alt="Movie image">
       <a href="<?php echo get_post_permalink(); ?>">

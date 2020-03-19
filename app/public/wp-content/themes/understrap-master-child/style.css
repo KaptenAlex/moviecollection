@@ -30,8 +30,8 @@ a {
 }
 
 .movie-image {
+  height: 250px;
   width: 100%;
-  z-index: 0;
 }
 
 .movie-link {

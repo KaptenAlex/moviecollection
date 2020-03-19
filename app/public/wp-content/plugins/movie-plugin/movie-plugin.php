@@ -6,6 +6,7 @@ Version:     2.1
 Author:      Alexander Wilson
 */
 
+//Function for registering the custom post type "Movie".
 function cptui_register_my_cpts_movie() {
 
 	$labels = [
@@ -71,6 +72,7 @@ function cptui_register_my_cpts_movie() {
 
 add_action( 'init', 'cptui_register_my_cpts_movie' );
 
+//Function for registering IMDB ID meta box in Movie post type.
 function add_custom_boxes()
 {
         add_meta_box(
@@ -82,10 +84,9 @@ function add_custom_boxes()
 }
 add_action('add_meta_boxes', 'add_custom_boxes');
 
-//Custom box rendering and save functions for IMDB ID.
+//Function for rendering HTML for the IMDB ID custom box.
 function custom_box_imdb($post)
 {
-    //HTML for custom box in edit page.
     $value = get_post_meta($post->ID, '_imdb_id', true);
     ?>
     <label for="_imdb_id">ID</label>
@@ -94,6 +95,7 @@ function custom_box_imdb($post)
     <?php
 }
 
+//Function for checking if there is a _imdb_id and then saving it to DB.
 function save_custom_box_imdb_data($post_id)
 {
     //Save the value of the input into meta key _imdb_id

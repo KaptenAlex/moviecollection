@@ -134,7 +134,7 @@ CREATE TABLE `wp_options` (
   PRIMARY KEY (`option_id`),
   UNIQUE KEY `option_name` (`option_name`),
   KEY `autoload` (`autoload`)
-) ENGINE=InnoDB AUTO_INCREMENT=539 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=552 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -175,7 +175,7 @@ INSERT INTO `wp_options` VALUES (29,'rewrite_rules','a:104:{s:11:\"^wp-json/?$\"
 INSERT INTO `wp_options` VALUES (30,'hack_file','0','yes');
 INSERT INTO `wp_options` VALUES (31,'blog_charset','UTF-8','yes');
 INSERT INTO `wp_options` VALUES (32,'moderation_keys','','no');
-INSERT INTO `wp_options` VALUES (33,'active_plugins','a:5:{i:0;s:31:\"query-monitor/query-monitor.php\";i:1;s:25:\"CPT-Movies/CPT-Movies.php\";i:2;s:19:\"Metabox/Metabox.php\";i:3;s:33:\"get-movie-data/get-movie-data.php\";i:4;s:25:\"kk-star-ratings/index.php\";}','yes');
+INSERT INTO `wp_options` VALUES (33,'active_plugins','a:3:{i:0;s:31:\"query-monitor/query-monitor.php\";i:1;s:25:\"kk-star-ratings/index.php\";i:2;s:29:\"movie-plugin/movie-plugin.php\";}','yes');
 INSERT INTO `wp_options` VALUES (34,'category_base','','yes');
 INSERT INTO `wp_options` VALUES (35,'ping_sites','http://rpc.pingomatic.com/','yes');
 INSERT INTO `wp_options` VALUES (36,'comment_max_links','2','yes');
@@ -245,7 +245,7 @@ INSERT INTO `wp_options` VALUES (99,'widget_recent-comments','a:1:{s:12:\"_multi
 INSERT INTO `wp_options` VALUES (100,'widget_archives','a:3:{i:2;a:3:{s:5:\"title\";s:0:\"\";s:5:\"count\";i:0;s:8:\"dropdown\";i:0;}i:3;a:3:{s:5:\"title\";s:7:\"Archive\";s:5:\"count\";i:1;s:8:\"dropdown\";i:0;}s:12:\"_multiwidget\";i:1;}','yes');
 INSERT INTO `wp_options` VALUES (101,'widget_meta','a:2:{i:2;a:1:{s:5:\"title\";s:0:\"\";}s:12:\"_multiwidget\";i:1;}','yes');
 INSERT INTO `wp_options` VALUES (102,'sidebars_widgets','a:8:{s:19:\"wp_inactive_widgets\";a:2:{i:0;s:6:\"text-2\";i:1;s:6:\"text-3\";}s:13:\"right-sidebar\";a:0:{}s:12:\"left-sidebar\";a:3:{i:0;s:10:\"archives-2\";i:1;s:12:\"categories-2\";i:2;s:6:\"meta-2\";}s:4:\"hero\";a:0:{}s:10:\"herocanvas\";a:0:{}s:10:\"statichero\";a:0:{}s:10:\"footerfull\";a:0:{}s:13:\"array_version\";i:3;}','yes');
-INSERT INTO `wp_options` VALUES (103,'cron','a:6:{i:1584611303;a:1:{s:34:\"wp_privacy_delete_old_export_files\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:6:\"hourly\";s:4:\"args\";a:0:{}s:8:\"interval\";i:3600;}}}i:1584618502;a:1:{s:32:\"recovery_mode_clean_expired_keys\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:5:\"daily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:86400;}}}i:1584618503;a:3:{s:17:\"wp_update_plugins\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:10:\"twicedaily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:43200;}}s:16:\"wp_update_themes\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:10:\"twicedaily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:43200;}}s:16:\"wp_version_check\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:10:\"twicedaily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:43200;}}}i:1584618627;a:2:{s:19:\"wp_scheduled_delete\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:5:\"daily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:86400;}}s:25:\"delete_expired_transients\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:5:\"daily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:86400;}}}i:1584618629;a:1:{s:30:\"wp_scheduled_auto_draft_delete\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:5:\"daily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:86400;}}}s:7:\"version\";i:2;}','yes');
+INSERT INTO `wp_options` VALUES (103,'cron','a:6:{i:1584614903;a:1:{s:34:\"wp_privacy_delete_old_export_files\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:6:\"hourly\";s:4:\"args\";a:0:{}s:8:\"interval\";i:3600;}}}i:1584618502;a:1:{s:32:\"recovery_mode_clean_expired_keys\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:5:\"daily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:86400;}}}i:1584618503;a:3:{s:17:\"wp_update_plugins\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:10:\"twicedaily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:43200;}}s:16:\"wp_update_themes\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:10:\"twicedaily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:43200;}}s:16:\"wp_version_check\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:10:\"twicedaily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:43200;}}}i:1584618627;a:2:{s:19:\"wp_scheduled_delete\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:5:\"daily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:86400;}}s:25:\"delete_expired_transients\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:5:\"daily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:86400;}}}i:1584618629;a:1:{s:30:\"wp_scheduled_auto_draft_delete\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:5:\"daily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:86400;}}}s:7:\"version\";i:2;}','yes');
 INSERT INTO `wp_options` VALUES (104,'widget_pages','a:1:{s:12:\"_multiwidget\";i:1;}','yes');
 INSERT INTO `wp_options` VALUES (105,'widget_calendar','a:1:{s:12:\"_multiwidget\";i:1;}','yes');
 INSERT INTO `wp_options` VALUES (106,'widget_media_audio','a:1:{s:12:\"_multiwidget\";i:1;}','yes');
@@ -258,10 +258,10 @@ INSERT INTO `wp_options` VALUES (112,'widget_tag_cloud','a:1:{s:12:\"_multiwidge
 INSERT INTO `wp_options` VALUES (113,'widget_nav_menu','a:3:{i:2;a:0:{}i:3;a:0:{}s:12:\"_multiwidget\";i:1;}','yes');
 INSERT INTO `wp_options` VALUES (114,'widget_custom_html','a:1:{s:12:\"_multiwidget\";i:1;}','yes');
 INSERT INTO `wp_options` VALUES (116,'recovery_keys','a:0:{}','yes');
-INSERT INTO `wp_options` VALUES (117,'_site_transient_update_core','O:8:\"stdClass\":4:{s:7:\"updates\";a:1:{i:0;O:8:\"stdClass\":10:{s:8:\"response\";s:6:\"latest\";s:8:\"download\";s:59:\"https://downloads.wordpress.org/release/wordpress-5.3.2.zip\";s:6:\"locale\";s:5:\"en_US\";s:8:\"packages\";O:8:\"stdClass\":5:{s:4:\"full\";s:59:\"https://downloads.wordpress.org/release/wordpress-5.3.2.zip\";s:10:\"no_content\";s:70:\"https://downloads.wordpress.org/release/wordpress-5.3.2-no-content.zip\";s:11:\"new_bundled\";s:71:\"https://downloads.wordpress.org/release/wordpress-5.3.2-new-bundled.zip\";s:7:\"partial\";b:0;s:8:\"rollback\";b:0;}s:7:\"current\";s:5:\"5.3.2\";s:7:\"version\";s:5:\"5.3.2\";s:11:\"php_version\";s:6:\"5.6.20\";s:13:\"mysql_version\";s:3:\"5.0\";s:11:\"new_bundled\";s:3:\"5.3\";s:15:\"partial_version\";s:0:\"\";}}s:12:\"last_checked\";i:1584606224;s:15:\"version_checked\";s:5:\"5.3.2\";s:12:\"translations\";a:0:{}}','no');
+INSERT INTO `wp_options` VALUES (117,'_site_transient_update_core','O:8:\"stdClass\":4:{s:7:\"updates\";a:1:{i:0;O:8:\"stdClass\":10:{s:8:\"response\";s:6:\"latest\";s:8:\"download\";s:59:\"https://downloads.wordpress.org/release/wordpress-5.3.2.zip\";s:6:\"locale\";s:5:\"en_US\";s:8:\"packages\";O:8:\"stdClass\":5:{s:4:\"full\";s:59:\"https://downloads.wordpress.org/release/wordpress-5.3.2.zip\";s:10:\"no_content\";s:70:\"https://downloads.wordpress.org/release/wordpress-5.3.2-no-content.zip\";s:11:\"new_bundled\";s:71:\"https://downloads.wordpress.org/release/wordpress-5.3.2-new-bundled.zip\";s:7:\"partial\";b:0;s:8:\"rollback\";b:0;}s:7:\"current\";s:5:\"5.3.2\";s:7:\"version\";s:5:\"5.3.2\";s:11:\"php_version\";s:6:\"5.6.20\";s:13:\"mysql_version\";s:3:\"5.0\";s:11:\"new_bundled\";s:3:\"5.3\";s:15:\"partial_version\";s:0:\"\";}}s:12:\"last_checked\";i:1584612230;s:15:\"version_checked\";s:5:\"5.3.2\";s:12:\"translations\";a:0:{}}','no');
 INSERT INTO `wp_options` VALUES (123,'theme_mods_twentytwenty','a:2:{s:18:\"custom_css_post_id\";i:-1;s:16:\"sidebars_widgets\";a:2:{s:4:\"time\";i:1583843582;s:4:\"data\";a:3:{s:19:\"wp_inactive_widgets\";a:0:{}s:9:\"sidebar-1\";a:3:{i:0;s:8:\"search-2\";i:1;s:14:\"recent-posts-2\";i:2;s:17:\"recent-comments-2\";}s:9:\"sidebar-2\";a:3:{i:0;s:10:\"archives-2\";i:1;s:12:\"categories-2\";i:2;s:6:\"meta-2\";}}}}','yes');
 INSERT INTO `wp_options` VALUES (141,'can_compress_scripts','1','no');
-INSERT INTO `wp_options` VALUES (144,'recently_activated','a:0:{}','yes');
+INSERT INTO `wp_options` VALUES (144,'recently_activated','a:2:{s:33:\"get-movie-data/get-movie-data.php\";i:1584609482;s:19:\"Metabox/Metabox.php\";i:1584609480;}','yes');
 INSERT INTO `wp_options` VALUES (151,'cptui_new_install','false','yes');
 INSERT INTO `wp_options` VALUES (152,'cptui_post_types','a:1:{s:5:\"movie\";a:30:{s:4:\"name\";s:5:\"movie\";s:5:\"label\";s:6:\"Movies\";s:14:\"singular_label\";s:5:\"Movie\";s:11:\"description\";s:0:\"\";s:6:\"public\";s:4:\"true\";s:18:\"publicly_queryable\";s:4:\"true\";s:7:\"show_ui\";s:4:\"true\";s:17:\"show_in_nav_menus\";s:4:\"true\";s:16:\"delete_with_user\";s:5:\"false\";s:12:\"show_in_rest\";s:4:\"true\";s:9:\"rest_base\";s:0:\"\";s:21:\"rest_controller_class\";s:0:\"\";s:11:\"has_archive\";s:5:\"false\";s:18:\"has_archive_string\";s:0:\"\";s:19:\"exclude_from_search\";s:5:\"false\";s:15:\"capability_type\";s:4:\"post\";s:12:\"hierarchical\";s:5:\"false\";s:7:\"rewrite\";s:4:\"true\";s:12:\"rewrite_slug\";s:0:\"\";s:17:\"rewrite_withfront\";s:4:\"true\";s:9:\"query_var\";s:4:\"true\";s:14:\"query_var_slug\";s:0:\"\";s:13:\"menu_position\";s:0:\"\";s:12:\"show_in_menu\";s:4:\"true\";s:19:\"show_in_menu_string\";s:0:\"\";s:9:\"menu_icon\";s:0:\"\";s:8:\"supports\";a:3:{i:0;s:5:\"title\";i:1;s:6:\"editor\";i:2;s:9:\"thumbnail\";}s:10:\"taxonomies\";a:0:{}s:6:\"labels\";a:30:{s:9:\"menu_name\";s:9:\"My Movies\";s:9:\"all_items\";s:10:\"All Movies\";s:7:\"add_new\";s:7:\"Add new\";s:12:\"add_new_item\";s:13:\"Add new Movie\";s:9:\"edit_item\";s:10:\"Edit Movie\";s:8:\"new_item\";s:9:\"New Movie\";s:9:\"view_item\";s:10:\"View Movie\";s:10:\"view_items\";s:11:\"View Movies\";s:12:\"search_items\";s:13:\"Search Movies\";s:9:\"not_found\";s:15:\"No Movies found\";s:18:\"not_found_in_trash\";s:24:\"No Movies found in trash\";s:6:\"parent\";s:13:\"Parent Movie:\";s:14:\"featured_image\";s:29:\"Featured image for this Movie\";s:18:\"set_featured_image\";s:33:\"Set featured image for this Movie\";s:21:\"remove_featured_image\";s:36:\"Remove featured image for this Movie\";s:18:\"use_featured_image\";s:36:\"Use as featured image for this Movie\";s:8:\"archives\";s:14:\"Movie archives\";s:16:\"insert_into_item\";s:17:\"Insert into Movie\";s:21:\"uploaded_to_this_item\";s:20:\"Upload to this Movie\";s:17:\"filter_items_list\";s:18:\"Filter Movies list\";s:21:\"items_list_navigation\";s:22:\"Movies list navigation\";s:10:\"items_list\";s:11:\"Movies list\";s:10:\"attributes\";s:17:\"Movies attributes\";s:14:\"name_admin_bar\";s:5:\"Movie\";s:14:\"item_published\";s:15:\"Movie published\";s:24:\"item_published_privately\";s:26:\"Movie published privately.\";s:22:\"item_reverted_to_draft\";s:24:\"Movie reverted to draft.\";s:14:\"item_scheduled\";s:15:\"Movie scheduled\";s:12:\"item_updated\";s:14:\"Movie updated.\";s:17:\"parent_item_colon\";s:13:\"Parent Movie:\";}s:15:\"custom_supports\";s:0:\"\";}}','yes');
 INSERT INTO `wp_options` VALUES (163,'theme_mods_movie_collection','a:1:{s:18:\"custom_css_post_id\";i:-1;}','yes');
@@ -270,7 +270,7 @@ INSERT INTO `wp_options` VALUES (167,'theme_mods_understrap-master','a:4:{s:28:\
 INSERT INTO `wp_options` VALUES (170,'theme_mods_understrap-master-child','a:7:{s:28:\"understrap_posts_index_style\";s:7:\"default\";s:27:\"understrap_sidebar_position\";s:5:\"right\";s:25:\"understrap_container_type\";s:9:\"container\";s:18:\"custom_css_post_id\";i:-1;s:18:\"nav_menu_locations\";a:1:{s:7:\"primary\";i:3;}s:11:\"custom_logo\";s:0:\"\";s:16:\"background_color\";s:6:\"000000\";}','yes');
 INSERT INTO `wp_options` VALUES (171,'current_theme','Understrap child','yes');
 INSERT INTO `wp_options` VALUES (172,'theme_switched','','yes');
-INSERT INTO `wp_options` VALUES (197,'fs_active_plugins','O:8:\"stdClass\":3:{s:7:\"plugins\";a:1:{s:24:\"kk-star-ratings/freemius\";O:8:\"stdClass\":4:{s:7:\"version\";s:5:\"2.3.0\";s:4:\"type\";s:6:\"plugin\";s:9:\"timestamp\";i:1584606230;s:11:\"plugin_path\";s:25:\"kk-star-ratings/index.php\";}}s:7:\"abspath\";s:59:\"C:\\Users\\Alexander\\Local Sites\\movie-collection\\app\\public/\";s:6:\"newest\";O:8:\"stdClass\":5:{s:11:\"plugin_path\";s:25:\"kk-star-ratings/index.php\";s:8:\"sdk_path\";s:24:\"kk-star-ratings/freemius\";s:7:\"version\";s:5:\"2.3.0\";s:13:\"in_activation\";b:0;s:9:\"timestamp\";i:1584606230;}}','yes');
+INSERT INTO `wp_options` VALUES (197,'fs_active_plugins','O:8:\"stdClass\":3:{s:7:\"plugins\";a:1:{s:24:\"kk-star-ratings/freemius\";O:8:\"stdClass\":4:{s:7:\"version\";s:5:\"2.3.0\";s:4:\"type\";s:6:\"plugin\";s:9:\"timestamp\";i:1584612470;s:11:\"plugin_path\";s:25:\"kk-star-ratings/index.php\";}}s:7:\"abspath\";s:59:\"C:\\Users\\Alexander\\Local Sites\\movie-collection\\app\\public/\";s:6:\"newest\";O:8:\"stdClass\":5:{s:11:\"plugin_path\";s:25:\"kk-star-ratings/index.php\";s:8:\"sdk_path\";s:24:\"kk-star-ratings/freemius\";s:7:\"version\";s:5:\"2.3.0\";s:13:\"in_activation\";b:0;s:9:\"timestamp\";i:1584612470;}}','yes');
 INSERT INTO `wp_options` VALUES (198,'fs_debug_mode','','yes');
 INSERT INTO `wp_options` VALUES (199,'fs_accounts','a:6:{s:21:\"id_slug_type_path_map\";a:1:{i:3890;a:3:{s:4:\"slug\";s:15:\"kk-star-ratings\";s:4:\"type\";s:6:\"plugin\";s:4:\"path\";s:25:\"kk-star-ratings/index.php\";}}s:11:\"plugin_data\";a:1:{s:15:\"kk-star-ratings\";a:17:{s:16:\"plugin_main_file\";O:8:\"stdClass\":1:{s:4:\"path\";s:25:\"kk-star-ratings/index.php\";}s:20:\"is_network_activated\";b:0;s:17:\"install_timestamp\";i:1583848183;s:16:\"sdk_last_version\";N;s:11:\"sdk_version\";s:5:\"2.3.0\";s:16:\"sdk_upgrade_mode\";b:1;s:18:\"sdk_downgrade_mode\";b:0;s:19:\"plugin_last_version\";N;s:14:\"plugin_version\";s:5:\"4.1.3\";s:19:\"plugin_upgrade_mode\";b:1;s:21:\"plugin_downgrade_mode\";b:0;s:21:\"is_plugin_new_install\";b:1;s:17:\"connectivity_test\";a:6:{s:12:\"is_connected\";b:1;s:4:\"host\";s:21:\"moviecollection.local\";s:9:\"server_ip\";s:3:\"::1\";s:9:\"is_active\";b:1;s:9:\"timestamp\";i:1583848183;s:7:\"version\";s:5:\"4.1.3\";}s:17:\"was_plugin_loaded\";b:1;s:15:\"prev_is_premium\";b:0;s:16:\"uninstall_reason\";O:8:\"stdClass\":3:{s:2:\"id\";s:2:\"15\";s:4:\"info\";s:0:\"\";s:12:\"is_anonymous\";b:0;}s:12:\"is_anonymous\";a:3:{s:2:\"is\";b:1;s:9:\"timestamp\";i:1584551856;s:7:\"version\";s:5:\"4.1.3\";}}}s:13:\"file_slug_map\";a:1:{s:25:\"kk-star-ratings/index.php\";s:15:\"kk-star-ratings\";}s:7:\"plugins\";a:1:{s:15:\"kk-star-ratings\";O:9:\"FS_Plugin\":22:{s:16:\"parent_plugin_id\";N;s:5:\"title\";s:15:\"kk Star Ratings\";s:4:\"slug\";s:15:\"kk-star-ratings\";s:12:\"premium_slug\";s:23:\"kk-star-ratings-premium\";s:4:\"type\";s:6:\"plugin\";s:20:\"affiliate_moderation\";b:0;s:19:\"is_wp_org_compliant\";b:1;s:22:\"premium_releases_count\";N;s:4:\"file\";s:25:\"kk-star-ratings/index.php\";s:7:\"version\";s:5:\"4.1.3\";s:11:\"auto_update\";N;s:4:\"info\";N;s:10:\"is_premium\";b:0;s:14:\"premium_suffix\";s:9:\"(Premium)\";s:7:\"is_live\";b:1;s:9:\"bundle_id\";N;s:10:\"public_key\";s:32:\"pk_e6d3c068ac8b44274990af9fc9eeb\";s:10:\"secret_key\";N;s:2:\"id\";s:4:\"3890\";s:7:\"updated\";N;s:7:\"created\";N;s:22:\"\0FS_Entity\0_is_updated\";b:0;}}s:9:\"unique_id\";s:32:\"3a5fefdac0e01ff888e1a43a5282a0cb\";s:13:\"admin_notices\";a:1:{s:15:\"kk-star-ratings\";a:0:{}}}','yes');
 INSERT INTO `wp_options` VALUES (200,'fs_api_cache','a:0:{}','yes');
@@ -288,7 +288,7 @@ INSERT INTO `wp_options` VALUES (213,'kksr_greet','Rate this [type]','yes');
 INSERT INTO `wp_options` VALUES (214,'kksr_grs','','yes');
 INSERT INTO `wp_options` VALUES (215,'kksr_sd','{\r\n    \"@context\": \"https://schema.org/\",\r\n    \"@type\": \"CreativeWorkSeries\",\r\n    \"name\": \"[title]\",\r\n    \"aggregateRating\": {\r\n        \"@type\": \"AggregateRating\",\r\n        \"ratingValue\": \"[score]\",\r\n        \"bestRating\": \"[best]\",\r\n        \"ratingCount\": \"[count]\"\r\n    }\r\n}','yes');
 INSERT INTO `wp_options` VALUES (216,'kksr_ver','4.1.3','yes');
-INSERT INTO `wp_options` VALUES (251,'_site_transient_update_plugins','O:8:\"stdClass\":4:{s:12:\"last_checked\";i:1584606223;s:8:\"response\";a:0:{}s:12:\"translations\";a:0:{}s:9:\"no_update\";a:2:{s:25:\"kk-star-ratings/index.php\";O:8:\"stdClass\":9:{s:2:\"id\";s:29:\"w.org/plugins/kk-star-ratings\";s:4:\"slug\";s:15:\"kk-star-ratings\";s:6:\"plugin\";s:25:\"kk-star-ratings/index.php\";s:11:\"new_version\";s:5:\"4.1.3\";s:3:\"url\";s:46:\"https://wordpress.org/plugins/kk-star-ratings/\";s:7:\"package\";s:64:\"https://downloads.wordpress.org/plugin/kk-star-ratings.4.1.3.zip\";s:5:\"icons\";a:2:{s:2:\"2x\";s:68:\"https://ps.w.org/kk-star-ratings/assets/icon-256x256.jpg?rev=2140680\";s:2:\"1x\";s:68:\"https://ps.w.org/kk-star-ratings/assets/icon-128x128.jpg?rev=2140680\";}s:7:\"banners\";a:2:{s:2:\"2x\";s:71:\"https://ps.w.org/kk-star-ratings/assets/banner-1544x500.jpg?rev=2140680\";s:2:\"1x\";s:70:\"https://ps.w.org/kk-star-ratings/assets/banner-772x250.jpg?rev=2140680\";}s:11:\"banners_rtl\";a:0:{}}s:31:\"query-monitor/query-monitor.php\";O:8:\"stdClass\":9:{s:2:\"id\";s:27:\"w.org/plugins/query-monitor\";s:4:\"slug\";s:13:\"query-monitor\";s:6:\"plugin\";s:31:\"query-monitor/query-monitor.php\";s:11:\"new_version\";s:5:\"3.5.2\";s:3:\"url\";s:44:\"https://wordpress.org/plugins/query-monitor/\";s:7:\"package\";s:62:\"https://downloads.wordpress.org/plugin/query-monitor.3.5.2.zip\";s:5:\"icons\";a:3:{s:2:\"2x\";s:66:\"https://ps.w.org/query-monitor/assets/icon-256x256.png?rev=2056073\";s:2:\"1x\";s:58:\"https://ps.w.org/query-monitor/assets/icon.svg?rev=2056073\";s:3:\"svg\";s:58:\"https://ps.w.org/query-monitor/assets/icon.svg?rev=2056073\";}s:7:\"banners\";a:2:{s:2:\"2x\";s:69:\"https://ps.w.org/query-monitor/assets/banner-1544x500.png?rev=1629576\";s:2:\"1x\";s:68:\"https://ps.w.org/query-monitor/assets/banner-772x250.png?rev=1731469\";}s:11:\"banners_rtl\";a:0:{}}}}','no');
+INSERT INTO `wp_options` VALUES (251,'_site_transient_update_plugins','O:8:\"stdClass\":5:{s:12:\"last_checked\";i:1584609939;s:7:\"checked\";a:3:{s:25:\"kk-star-ratings/index.php\";s:5:\"4.1.3\";s:29:\"movie-plugin/movie-plugin.php\";s:3:\"2.1\";s:31:\"query-monitor/query-monitor.php\";s:5:\"3.5.2\";}s:8:\"response\";a:0:{}s:12:\"translations\";a:0:{}s:9:\"no_update\";a:2:{s:25:\"kk-star-ratings/index.php\";O:8:\"stdClass\":9:{s:2:\"id\";s:29:\"w.org/plugins/kk-star-ratings\";s:4:\"slug\";s:15:\"kk-star-ratings\";s:6:\"plugin\";s:25:\"kk-star-ratings/index.php\";s:11:\"new_version\";s:5:\"4.1.3\";s:3:\"url\";s:46:\"https://wordpress.org/plugins/kk-star-ratings/\";s:7:\"package\";s:64:\"https://downloads.wordpress.org/plugin/kk-star-ratings.4.1.3.zip\";s:5:\"icons\";a:2:{s:2:\"2x\";s:68:\"https://ps.w.org/kk-star-ratings/assets/icon-256x256.jpg?rev=2140680\";s:2:\"1x\";s:68:\"https://ps.w.org/kk-star-ratings/assets/icon-128x128.jpg?rev=2140680\";}s:7:\"banners\";a:2:{s:2:\"2x\";s:71:\"https://ps.w.org/kk-star-ratings/assets/banner-1544x500.jpg?rev=2140680\";s:2:\"1x\";s:70:\"https://ps.w.org/kk-star-ratings/assets/banner-772x250.jpg?rev=2140680\";}s:11:\"banners_rtl\";a:0:{}}s:31:\"query-monitor/query-monitor.php\";O:8:\"stdClass\":9:{s:2:\"id\";s:27:\"w.org/plugins/query-monitor\";s:4:\"slug\";s:13:\"query-monitor\";s:6:\"plugin\";s:31:\"query-monitor/query-monitor.php\";s:11:\"new_version\";s:5:\"3.5.2\";s:3:\"url\";s:44:\"https://wordpress.org/plugins/query-monitor/\";s:7:\"package\";s:62:\"https://downloads.wordpress.org/plugin/query-monitor.3.5.2.zip\";s:5:\"icons\";a:3:{s:2:\"2x\";s:66:\"https://ps.w.org/query-monitor/assets/icon-256x256.png?rev=2056073\";s:2:\"1x\";s:58:\"https://ps.w.org/query-monitor/assets/icon.svg?rev=2056073\";s:3:\"svg\";s:58:\"https://ps.w.org/query-monitor/assets/icon.svg?rev=2056073\";}s:7:\"banners\";a:2:{s:2:\"2x\";s:69:\"https://ps.w.org/query-monitor/assets/banner-1544x500.png?rev=1629576\";s:2:\"1x\";s:68:\"https://ps.w.org/query-monitor/assets/banner-772x250.png?rev=1731469\";}s:11:\"banners_rtl\";a:0:{}}}}','no');
 INSERT INTO `wp_options` VALUES (325,'category_children','a:0:{}','yes');
 INSERT INTO `wp_options` VALUES (368,'recovery_mode_email_last_sent','1584369950','yes');
 INSERT INTO `wp_options` VALUES (459,'nav_menu_options','a:2:{i:0;b:0;s:8:\"auto_add\";a:0:{}}','yes');
@@ -296,13 +296,13 @@ INSERT INTO `wp_options` VALUES (473,'_site_transient_timeout_browser_97fc230848
 INSERT INTO `wp_options` VALUES (474,'_site_transient_browser_97fc230848bc304ccee289a55f3e5339','a:10:{s:4:\"name\";s:6:\"Chrome\";s:7:\"version\";s:13:\"80.0.3987.132\";s:8:\"platform\";s:7:\"Windows\";s:10:\"update_url\";s:29:\"https://www.google.com/chrome\";s:7:\"img_src\";s:43:\"http://s.w.org/images/browsers/chrome.png?1\";s:11:\"img_src_ssl\";s:44:\"https://s.w.org/images/browsers/chrome.png?1\";s:15:\"current_version\";s:2:\"18\";s:7:\"upgrade\";b:0;s:8:\"insecure\";b:0;s:6:\"mobile\";b:0;}','no');
 INSERT INTO `wp_options` VALUES (475,'_site_transient_timeout_php_check_472f71d2a071d463a95f84346288dc89','1585052674','no');
 INSERT INTO `wp_options` VALUES (476,'_site_transient_php_check_472f71d2a071d463a95f84346288dc89','a:5:{s:19:\"recommended_version\";s:3:\"7.3\";s:15:\"minimum_version\";s:6:\"5.6.20\";s:12:\"is_supported\";b:1;s:9:\"is_secure\";b:1;s:13:\"is_acceptable\";b:1;}','no');
-INSERT INTO `wp_options` VALUES (504,'_site_transient_timeout_community-events-d41d8cd98f00b204e9800998ecf8427e','1584651925','no');
+INSERT INTO `wp_options` VALUES (504,'_site_transient_timeout_community-events-d41d8cd98f00b204e9800998ecf8427e','1584655855','no');
 INSERT INTO `wp_options` VALUES (505,'_site_transient_community-events-d41d8cd98f00b204e9800998ecf8427e','a:3:{s:9:\"sandboxed\";b:0;s:8:\"location\";a:1:{s:2:\"ip\";b:0;}s:6:\"events\";a:0:{}}','no');
-INSERT INTO `wp_options` VALUES (509,'_transient_timeout_plugin_slugs','1584638333','no');
-INSERT INTO `wp_options` VALUES (510,'_transient_plugin_slugs','a:5:{i:0;s:25:\"CPT-Movies/CPT-Movies.php\";i:1;s:25:\"kk-star-ratings/index.php\";i:2;s:19:\"Metabox/Metabox.php\";i:3;s:33:\"get-movie-data/get-movie-data.php\";i:4;s:31:\"query-monitor/query-monitor.php\";}','no');
+INSERT INTO `wp_options` VALUES (509,'_transient_timeout_plugin_slugs','1584699062','no');
+INSERT INTO `wp_options` VALUES (510,'_transient_plugin_slugs','a:3:{i:0;s:25:\"kk-star-ratings/index.php\";i:1;s:29:\"movie-plugin/movie-plugin.php\";i:2;s:31:\"query-monitor/query-monitor.php\";}','no');
 INSERT INTO `wp_options` VALUES (517,'_site_transient_timeout_theme_roots','1584608023','no');
 INSERT INTO `wp_options` VALUES (518,'_site_transient_theme_roots','a:6:{s:14:\"twentynineteen\";s:7:\"/themes\";s:15:\"twentyseventeen\";s:7:\"/themes\";s:13:\"twentysixteen\";s:7:\"/themes\";s:12:\"twentytwenty\";s:7:\"/themes\";s:23:\"understrap-master-child\";s:7:\"/themes\";s:17:\"understrap-master\";s:7:\"/themes\";}','no');
-INSERT INTO `wp_options` VALUES (538,'_transient_is_multi_author','0','yes');
+INSERT INTO `wp_options` VALUES (551,'_transient_is_multi_author','0','yes');
 /*!40000 ALTER TABLE `wp_options` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -321,7 +321,7 @@ CREATE TABLE `wp_postmeta` (
   PRIMARY KEY (`meta_id`),
   KEY `post_id` (`post_id`),
   KEY `meta_key` (`meta_key`(191))
-) ENGINE=InnoDB AUTO_INCREMENT=303 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=339 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -359,11 +359,11 @@ INSERT INTO `wp_postmeta` VALUES (48,22,'_wp_trash_meta_time','1583844300');
 INSERT INTO `wp_postmeta` VALUES (49,23,'_wp_trash_meta_status','publish');
 INSERT INTO `wp_postmeta` VALUES (50,23,'_wp_trash_meta_time','1583844388');
 INSERT INTO `wp_postmeta` VALUES (52,1,'_edit_lock','1583846691:1');
-INSERT INTO `wp_postmeta` VALUES (57,29,'_edit_lock','1584607147:1');
+INSERT INTO `wp_postmeta` VALUES (57,29,'_edit_lock','1584609429:1');
 INSERT INTO `wp_postmeta` VALUES (58,29,'_edit_last','1');
 INSERT INTO `wp_postmeta` VALUES (59,29,'imdb_id','tt8579674');
 INSERT INTO `wp_postmeta` VALUES (60,29,'_imdb_id','tt8579674');
-INSERT INTO `wp_postmeta` VALUES (61,30,'_edit_lock','1584607179:1');
+INSERT INTO `wp_postmeta` VALUES (61,30,'_edit_lock','1584610904:1');
 INSERT INTO `wp_postmeta` VALUES (62,30,'_edit_last','1');
 INSERT INTO `wp_postmeta` VALUES (63,30,'_imdb_id','tt0092067');
 INSERT INTO `wp_postmeta` VALUES (64,29,'_kksr_casts','1');
@@ -389,7 +389,7 @@ INSERT INTO `wp_postmeta` VALUES (92,30,'_kksr_ref','f528764d624db129b32c21fbca0
 INSERT INTO `wp_postmeta` VALUES (93,36,'_edit_lock','1584111525:1');
 INSERT INTO `wp_postmeta` VALUES (94,37,'_wp_trash_meta_status','publish');
 INSERT INTO `wp_postmeta` VALUES (95,37,'_wp_trash_meta_time','1584111713');
-INSERT INTO `wp_postmeta` VALUES (96,38,'_edit_lock','1584607137:1');
+INSERT INTO `wp_postmeta` VALUES (96,38,'_edit_lock','1584610633:1');
 INSERT INTO `wp_postmeta` VALUES (100,38,'_edit_last','1');
 INSERT INTO `wp_postmeta` VALUES (101,38,'_imdb_id','tt0068646');
 INSERT INTO `wp_postmeta` VALUES (102,38,'_kksr_status','');
@@ -402,17 +402,17 @@ INSERT INTO `wp_postmeta` VALUES (111,43,'_edit_lock','1584607168:1');
 INSERT INTO `wp_postmeta` VALUES (115,43,'_edit_last','1');
 INSERT INTO `wp_postmeta` VALUES (116,43,'_imdb_id','tt0060196');
 INSERT INTO `wp_postmeta` VALUES (117,43,'_kksr_status','');
-INSERT INTO `wp_postmeta` VALUES (118,38,'_kksr_casts','1');
-INSERT INTO `wp_postmeta` VALUES (119,38,'_kksr_ratings','5');
-INSERT INTO `wp_postmeta` VALUES (120,38,'_kksr_avg','5');
+INSERT INTO `wp_postmeta` VALUES (118,38,'_kksr_casts','2');
+INSERT INTO `wp_postmeta` VALUES (119,38,'_kksr_ratings','5.5');
+INSERT INTO `wp_postmeta` VALUES (120,38,'_kksr_avg','2.75');
 INSERT INTO `wp_postmeta` VALUES (121,38,'_kksr_ref','f528764d624db129b32c21fbca0cb8d6');
 INSERT INTO `wp_postmeta` VALUES (122,41,'_kksr_casts','1');
 INSERT INTO `wp_postmeta` VALUES (123,41,'_kksr_ratings','4.5');
 INSERT INTO `wp_postmeta` VALUES (124,41,'_kksr_avg','4.5');
 INSERT INTO `wp_postmeta` VALUES (125,41,'_kksr_ref','f528764d624db129b32c21fbca0cb8d6');
-INSERT INTO `wp_postmeta` VALUES (126,43,'_kksr_casts','1');
-INSERT INTO `wp_postmeta` VALUES (127,43,'_kksr_ratings','4');
-INSERT INTO `wp_postmeta` VALUES (128,43,'_kksr_avg','4');
+INSERT INTO `wp_postmeta` VALUES (126,43,'_kksr_casts','5');
+INSERT INTO `wp_postmeta` VALUES (127,43,'_kksr_ratings','21');
+INSERT INTO `wp_postmeta` VALUES (128,43,'_kksr_avg','4.2');
 INSERT INTO `wp_postmeta` VALUES (129,43,'_kksr_ref','f528764d624db129b32c21fbca0cb8d6');
 INSERT INTO `wp_postmeta` VALUES (130,34,'_kksr_casts','1');
 INSERT INTO `wp_postmeta` VALUES (131,34,'_kksr_ratings','2.5');
@@ -552,6 +552,42 @@ INSERT INTO `wp_postmeta` VALUES (299,80,'_movie_actors','Adam Driver, Scarlett 
 INSERT INTO `wp_postmeta` VALUES (300,80,'_movie_published','06 Dec 2019');
 INSERT INTO `wp_postmeta` VALUES (301,80,'_movie_poster','https://m.media-amazon.com/images/M/MV5BZGVmY2RjNDgtMTc3Yy00YmY0LTgwODItYzBjNWJhNTRlYjdkXkEyXkFqcGdeQXVyMjM4NTM5NDY@._V1_SX300.jpg');
 INSERT INTO `wp_postmeta` VALUES (302,80,'_kksr_status','');
+INSERT INTO `wp_postmeta` VALUES (303,81,'_edit_lock','1584610714:1');
+INSERT INTO `wp_postmeta` VALUES (304,81,'_edit_last','1');
+INSERT INTO `wp_postmeta` VALUES (305,81,'_imdb_id','tt2948372');
+INSERT INTO `wp_postmeta` VALUES (306,81,'_movie_actors','Jamie Foxx, Tina Fey, Quest Love, Phylicia Rashad');
+INSERT INTO `wp_postmeta` VALUES (307,81,'_movie_published','19 Jun 2020');
+INSERT INTO `wp_postmeta` VALUES (308,81,'_movie_poster','https://m.media-amazon.com/images/M/MV5BN2YxY2M5N2YtZmJhNS00YTE1LWE5OTQtMTYyYzkyMzIzOTE1XkEyXkFqcGdeQXVyODk4OTc3MTY@._V1_SX300.jpg');
+INSERT INTO `wp_postmeta` VALUES (309,81,'_kksr_status','');
+INSERT INTO `wp_postmeta` VALUES (310,81,'_kksr_casts','3');
+INSERT INTO `wp_postmeta` VALUES (311,81,'_kksr_ratings','12.5');
+INSERT INTO `wp_postmeta` VALUES (312,81,'_kksr_avg','4.1666666666667');
+INSERT INTO `wp_postmeta` VALUES (313,81,'_kksr_ref','f528764d624db129b32c21fbca0cb8d6');
+INSERT INTO `wp_postmeta` VALUES (314,81,'_kksr_ref','f528764d624db129b32c21fbca0cb8d6');
+INSERT INTO `wp_postmeta` VALUES (315,81,'_kksr_ref','f528764d624db129b32c21fbca0cb8d6');
+INSERT INTO `wp_postmeta` VALUES (316,82,'_edit_lock','1584610134:1');
+INSERT INTO `wp_postmeta` VALUES (317,82,'_edit_last','1');
+INSERT INTO `wp_postmeta` VALUES (318,82,'_kksr_status','');
+INSERT INTO `wp_postmeta` VALUES (319,82,'_imdb_id','tt7286456');
+INSERT INTO `wp_postmeta` VALUES (320,82,'_movie_actors','Joaquin Phoenix, Robert De Niro, Zazie Beetz, Frances Conroy');
+INSERT INTO `wp_postmeta` VALUES (321,82,'_movie_published','04 Oct 2019');
+INSERT INTO `wp_postmeta` VALUES (322,82,'_movie_poster','https://m.media-amazon.com/images/M/MV5BNGVjNWI4ZGUtNzE0MS00YTJmLWE0ZDctN2ZiYTk2YmI3NTYyXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_SX300.jpg');
+INSERT INTO `wp_postmeta` VALUES (323,38,'_kksr_ref','f528764d624db129b32c21fbca0cb8d6');
+INSERT INTO `wp_postmeta` VALUES (324,43,'_kksr_ref','f528764d624db129b32c21fbca0cb8d6');
+INSERT INTO `wp_postmeta` VALUES (325,43,'_kksr_ref','f528764d624db129b32c21fbca0cb8d6');
+INSERT INTO `wp_postmeta` VALUES (326,43,'_kksr_ref','f528764d624db129b32c21fbca0cb8d6');
+INSERT INTO `wp_postmeta` VALUES (327,43,'_kksr_ref','f528764d624db129b32c21fbca0cb8d6');
+INSERT INTO `wp_postmeta` VALUES (328,83,'_edit_lock','1584612576:1');
+INSERT INTO `wp_postmeta` VALUES (329,83,'_edit_last','1');
+INSERT INTO `wp_postmeta` VALUES (330,83,'_kksr_status','');
+INSERT INTO `wp_postmeta` VALUES (331,83,'_imdb_id','tt6048922');
+INSERT INTO `wp_postmeta` VALUES (332,83,'_movie_actors','Tom Hanks, Elisabeth Shue, Stephen Graham, Karl Glusman');
+INSERT INTO `wp_postmeta` VALUES (333,83,'_movie_published','12 Jun 2020');
+INSERT INTO `wp_postmeta` VALUES (334,83,'_movie_poster','https://m.media-amazon.com/images/M/MV5BMmNmN2JhNGQtZjkxYi00ZWE0LWFjYTctYjE2NjI2NWYwNjAxXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_SX300.jpg');
+INSERT INTO `wp_postmeta` VALUES (335,83,'_kksr_casts','1');
+INSERT INTO `wp_postmeta` VALUES (336,83,'_kksr_ratings','5');
+INSERT INTO `wp_postmeta` VALUES (337,83,'_kksr_avg','5');
+INSERT INTO `wp_postmeta` VALUES (338,83,'_kksr_ref','f528764d624db129b32c21fbca0cb8d6');
 /*!40000 ALTER TABLE `wp_postmeta` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -591,7 +627,7 @@ CREATE TABLE `wp_posts` (
   KEY `type_status_date` (`post_type`,`post_status`,`post_date`,`ID`),
   KEY `post_parent` (`post_parent`),
   KEY `post_author` (`post_author`)
-) ENGINE=InnoDB AUTO_INCREMENT=81 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=84 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -613,13 +649,13 @@ INSERT INTO `wp_posts` VALUES (20,1,'2020-03-10 12:42:49','2020-03-10 12:42:49',
 INSERT INTO `wp_posts` VALUES (21,1,'2020-03-10 12:43:10','2020-03-10 12:43:10','{\n    \"blogdescription\": {\n        \"value\": \"Wordpress site for movies!\",\n        \"type\": \"option\",\n        \"user_id\": 1,\n        \"date_modified_gmt\": \"2020-03-10 12:43:10\"\n    }\n}','','','trash','closed','closed','','9d392e51-bd10-47fc-b21a-754a6ce36027','','','2020-03-10 12:43:10','2020-03-10 12:43:10','',0,'http://moviecollection.local/9d392e51-bd10-47fc-b21a-754a6ce36027/',0,'customize_changeset','',0);
 INSERT INTO `wp_posts` VALUES (22,1,'2020-03-10 12:45:00','2020-03-10 12:45:00','{\n    \"understrap-master-child::background_color\": {\n        \"value\": \"#ff0000\",\n        \"type\": \"theme_mod\",\n        \"user_id\": 1,\n        \"date_modified_gmt\": \"2020-03-10 12:45:00\"\n    }\n}','','','trash','closed','closed','','f5c4ec60-cae3-437e-8150-4444e3525f71','','','2020-03-10 12:45:00','2020-03-10 12:45:00','',0,'http://moviecollection.local/f5c4ec60-cae3-437e-8150-4444e3525f71/',0,'customize_changeset','',0);
 INSERT INTO `wp_posts` VALUES (23,1,'2020-03-10 12:46:28','2020-03-10 12:46:28','{\n    \"understrap-master-child::background_color\": {\n        \"value\": \"#ffffff\",\n        \"type\": \"theme_mod\",\n        \"user_id\": 1,\n        \"date_modified_gmt\": \"2020-03-10 12:46:28\"\n    }\n}','','','trash','closed','closed','','8cc3cb8c-f576-4326-ab55-5bf690fabc64','','','2020-03-10 12:46:28','2020-03-10 12:46:28','',0,'http://moviecollection.local/8cc3cb8c-f576-4326-ab55-5bf690fabc64/',0,'customize_changeset','',0);
-INSERT INTO `wp_posts` VALUES (29,1,'2020-03-10 13:30:22','2020-03-10 13:30:22','April 6th, 1917. As a regiment assembles to wage war deep in enemy territory, two soldiers are assigned to race against time and deliver a message that will stop 1,600 men from walking straight into a deadly trap.','1917','','publish','closed','closed','','1917','','','2020-03-19 08:39:06','2020-03-19 08:39:06','',0,'http://moviecollection.local/?post_type=movie&#038;p=29',0,'movie','',0);
+INSERT INTO `wp_posts` VALUES (29,1,'2020-03-10 13:30:22','2020-03-10 13:30:22','April 6th, 1917. As a regiment assembles to wage war deep in enemy territory, two soldiers are assigned to race against time and deliver a message that will stop 1,600 men from walking straight into a deadly trap.','1917','','publish','closed','closed','','1917','','','2020-03-19 09:19:22','2020-03-19 09:19:22','',0,'http://moviecollection.local/?post_type=movie&#038;p=29',0,'movie','',0);
 INSERT INTO `wp_posts` VALUES (30,1,'2020-03-10 13:46:22','2020-03-10 13:46:22','A young boy stumbles into a mysterious girl who floats down from the sky. The girl, Sheeta, was chased by pirates, army and government secret agents. In saving her life, they begin a high flying adventure that goes through all sorts of flying machines, eventually searching for Sheeta\'s identity in a floating castle of a lost civilization.','Castle in the Sky','','publish','closed','closed','','laputa-slottet-i-himlen','','','2020-03-19 08:39:39','2020-03-19 08:39:39','',0,'http://moviecollection.local/?post_type=movie&#038;p=30',0,'movie','',0);
 INSERT INTO `wp_posts` VALUES (33,1,'2020-03-13 14:08:08','2020-03-13 14:08:08','<!-- wp:paragraph -->\n<p>Welcome to WordPress. This is your first post. Edit or delete it, then start writing!</p>\n<!-- /wp:paragraph -->','Hello world!','','inherit','closed','closed','','1-revision-v1','','','2020-03-13 14:08:08','2020-03-13 14:08:08','',1,'http://moviecollection.local/1-revision-v1/',0,'revision','',0);
 INSERT INTO `wp_posts` VALUES (34,1,'2020-03-13 14:08:38','2020-03-13 14:08:38','A film about Natasha Romanoff in her quests between the films Civil War and Infinity War.','Black Widow','','publish','closed','closed','','black-widow','','','2020-03-19 08:40:58','2020-03-19 08:40:58','',0,'http://moviecollection.local/?post_type=movie&#038;p=34',0,'movie','',0);
 INSERT INTO `wp_posts` VALUES (36,1,'2020-03-13 15:01:08','0000-00-00 00:00:00','','Auto Draft','','auto-draft','open','open','','','','','2020-03-13 15:01:08','0000-00-00 00:00:00','',0,'http://moviecollection.local/?p=36',0,'post','',0);
 INSERT INTO `wp_posts` VALUES (37,1,'2020-03-13 15:01:53','2020-03-13 15:01:53','{\n    \"understrap-master-child::background_color\": {\n        \"value\": \"#000000\",\n        \"type\": \"theme_mod\",\n        \"user_id\": 1,\n        \"date_modified_gmt\": \"2020-03-13 15:01:53\"\n    }\n}','','','trash','closed','closed','','3be89f79-3c2e-4459-ace5-38925f75ddfd','','','2020-03-13 15:01:53','2020-03-13 15:01:53','',0,'http://moviecollection.local/3be89f79-3c2e-4459-ace5-38925f75ddfd/',0,'customize_changeset','',0);
-INSERT INTO `wp_posts` VALUES (38,1,'2020-03-13 15:31:06','2020-03-13 15:31:06','When the aging head of a famous crime family decides to transfer his position to one of his subalterns, a series of unfortunate events start happening to the family, and a war begins between all the well-known families leading to insolence, deportation, murder and revenge, and ends with the favorable successor being finally chosen.','The Godfather','','publish','closed','closed','','the-godfather','','','2020-03-19 08:38:56','2020-03-19 08:38:56','',0,'http://moviecollection.local/?post_type=movie&#038;p=38',0,'movie','',0);
+INSERT INTO `wp_posts` VALUES (38,1,'2020-03-13 15:31:06','2020-03-13 15:31:06','When the aging head of a famous crime family decides to transfer his position to one of his subalterns, a series of unfortunate events start happening to the family, and a war begins between all the well-known families leading to insolence, deportation, murder and revenge, and ends with the favorable successor being finally chosen.','The Godfather','','publish','closed','closed','','the-godfather','','','2020-03-19 09:26:05','2020-03-19 09:26:05','',0,'http://moviecollection.local/?post_type=movie&#038;p=38',0,'movie','',0);
 INSERT INTO `wp_posts` VALUES (40,1,'2020-03-13 15:32:40','0000-00-00 00:00:00','','Auto Draft','','auto-draft','open','open','','','','','2020-03-13 15:32:40','0000-00-00 00:00:00','',0,'http://moviecollection.local/?p=40',0,'post','',0);
 INSERT INTO `wp_posts` VALUES (41,1,'2020-03-13 15:32:56','2020-03-13 15:32:56','A nameless first person narrator (Edward Norton) attends support groups in attempt to subdue his emotional state and relieve his insomniac state. When he meets Marla (Helena Bonham Carter), another fake attendee of support groups, his life seems to become a little more bearable. However when he associates himself with Tyler (Brad Pitt) he is dragged into an underground fight club and soap making scheme. Together the two men spiral out of control and engage in competitive rivalry for love and power. When the narrator is exposed to the hidden agenda of Tyler\'s fight club, he must accept the awful truth that Tyler may not be who he says he is.','Fight Club','','publish','closed','closed','','fight-club','','','2020-03-19 08:39:17','2020-03-19 08:39:17','',0,'http://moviecollection.local/?post_type=movie&#038;p=41',0,'movie','',0);
 INSERT INTO `wp_posts` VALUES (43,1,'2020-03-13 15:34:26','2020-03-13 15:34:26','Blondie (The Good) is a professional gunslinger who is out trying to earn a few dollars. Angel Eyes (The Bad) is a hit man who always commits to a task and sees it through, as long as he is paid to do so. And Tuco (The Ugly) is a wanted outlaw trying to take care of his own hide. Tuco and Blondie share a partnership together making money off Tuco\'s bounty, but when Blondie unties the partnership, Tuco tries to hunt down Blondie. When Blondie and Tuco come across a horse carriage loaded with dead bodies, they soon learn from the only survivor (Bill Carson) that he and a few other men have buried a stash of gold in a cemetery. Unfortunately Carson dies and Tuco only finds out the name of the cemetery, while Blondie finds out the name on the grave. Now the two must keep each other alive in order to find the gold. Angel Eyes (who had been looking for Bill Carson) discovers that Tuco and Blondie met with Carson and knows they know the location of the gold. All he needs is for the two to lead him to it. Now The Good, The Bad and The Ugly must all battle it out to get their hands on $200,000 worth of gold.','The Good, the Bad and the Ugly','','publish','closed','closed','','the-good-the-bad-the-ugly','','','2020-03-19 08:39:28','2020-03-19 08:39:28','',0,'http://moviecollection.local/?post_type=movie&#038;p=43',0,'movie','',0);
@@ -647,6 +683,9 @@ INSERT INTO `wp_posts` VALUES (77,1,'2020-03-19 08:58:41','2020-03-19 08:58:41',
 INSERT INTO `wp_posts` VALUES (78,1,'2020-03-19 08:59:57','2020-03-19 08:59:57','A faded television actor and his stunt double strive to achieve fame and success in the film industry during the final years of Hollywood\'s Golden Age in 1969 Los Angeles.','Once Upon a Time... in Hollywood','','publish','closed','closed','','f','','','2020-03-19 08:59:57','2020-03-19 08:59:57','',0,'http://moviecollection.local/?post_type=movie&#038;p=78',0,'movie','',0);
 INSERT INTO `wp_posts` VALUES (79,1,'2020-03-19 09:01:24','2020-03-19 09:01:24','A poor family, the Kims, con their way into becoming the servants of a rich family, the Parks. But their easy life gets complicated when their deception is threatened with exposure.','Parasite','','publish','closed','closed','','b','','','2020-03-19 09:01:25','2020-03-19 09:01:25','',0,'http://moviecollection.local/?post_type=movie&#038;p=79',0,'movie','',0);
 INSERT INTO `wp_posts` VALUES (80,1,'2020-03-19 09:02:16','2020-03-19 09:02:16','Noah Baumbach\'s incisive and compassionate look at a marriage breaking up and a family staying together.','Marriage Story','','publish','closed','closed','','b-2','','','2020-03-19 09:02:17','2020-03-19 09:02:17','',0,'http://moviecollection.local/?post_type=movie&#038;p=80',0,'movie','',0);
+INSERT INTO `wp_posts` VALUES (81,1,'2020-03-19 09:19:57','2020-03-19 09:19:57','A musician who has lost his passion for music is transported out of his body and must find his way back with the help of an infant soul learning about herself.','Soul','','publish','closed','closed','','a-2','','','2020-03-19 09:40:01','2020-03-19 09:40:01','',0,'http://moviecollection.local/?post_type=movie&#038;p=81',0,'movie','',0);
+INSERT INTO `wp_posts` VALUES (82,1,'2020-03-19 09:28:53','2020-03-19 09:28:53','In Gotham City, mentally troubled comedian Arthur Fleck is disregarded and mistreated by society. He then embarks on a downward spiral of revolution and bloody crime. This path brings him face-to-face with his alter-ego: the Joker.','Joker','','publish','closed','closed','','tt7286456','','','2020-03-19 09:28:54','2020-03-19 09:28:54','',0,'http://moviecollection.local/?post_type=movie&#038;p=82',0,'movie','',0);
+INSERT INTO `wp_posts` VALUES (83,1,'2020-03-19 10:09:35','2020-03-19 10:09:35','Early in World War II, an inexperienced U.S. Navy captain must lead an Allied convoy being stalked by Nazi U-boat wolfpacks.','Greyhound','','publish','closed','closed','','83','','','2020-03-19 10:09:36','2020-03-19 10:09:36','',0,'http://moviecollection.local/?post_type=movie&#038;p=83',0,'movie','',0);
 /*!40000 ALTER TABLE `wp_posts` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -864,4 +903,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-03-19 10:06:22
+-- Dump completed on 2020-03-19 11:26:35

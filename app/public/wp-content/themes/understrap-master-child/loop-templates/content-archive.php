@@ -14,9 +14,10 @@ $moviesQuery = new WP_Query( $args );
 <?php
 if ($moviesQuery -> have_posts() ) :
   while ($moviesQuery -> have_posts() ) : $moviesQuery -> the_post();
-  $rating = round(get_post_meta(get_the_ID(), '_kksr_avg', true), 1); ?>
+  $rating = round(get_post_meta(get_the_ID(), '_kksr_avg', true), 1);
+  $movie_poster = esc_url( get_post_meta( $post->ID, '_movie_poster', true ) ); ?>
     <div class="movie-box">
-      <img class="movie-image" src="<?php echo get_the_post_thumbnail_url(); ?>" alt="Movie image">
+      <img class="movie-image" src="<?php echo $movie_poster ?>" alt="Movie image">
       <a href="<?php echo get_post_permalink(); ?>">
         <h4 class="movie-link"><?php echo get_the_title(); ?></h4>
       </a>

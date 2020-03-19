@@ -17,10 +17,14 @@ defined( 'ABSPATH' ) || exit;
 
 	</header><!-- .entry-header -->
 	<br>
-	<?php echo get_the_post_thumbnail( $post->ID, 'large' ); ?>
-
+	<?php
+		$movie_poster = esc_url( get_post_meta( $post->ID, '_movie_poster', true ) ); ?>
+		<div class="movie_poster">
+			<img src="<?php echo $movie_poster; ?>" alt="Movie poster">
+		</div>
 	<div class="entry-content">
 		<div class="published">
+			<br>
 			<h2>Published</h2>
 			<?php
 			$movie_published = get_post_meta( $post->ID, '_movie_published', true );

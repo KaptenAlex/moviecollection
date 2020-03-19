@@ -43,15 +43,18 @@ function update_actor_and_published_metadata($post_id)
   $IMDB_id = sanitize_text_field( $_POST["_imdb_id"] );
   $IMDB_date = sanitize_text_field( $_POST["_movie_published"] );
   $IMDB_actors = sanitize_text_field( $_POST["_movie_actors"] );
+  $IMDB_poster = esc_url( $_POST["_movie_poster"] );
 
   $movie_released = sanitize_text_field( $movie->Released );
   $movie_actors = sanitize_text_field( $movie->Actors );
   $movie_imdb_ID = sanitize_text_field( $movie->imdbID );
-  
+  $movie_poster = esc_url( $movie->Poster );
+
   if ( !empty( $IMDB_id ) || $IMDB_id != $movie_imdb_ID ) :
     if ($IMDB_date != $movie_released || $IMDB_actors != $movie_actors ) :
       update_post_meta( $post_id, '_movie_actors', $movie_actors );
       update_post_meta( $post_id, '_movie_published', $movie_released );
+      update_post_meta( $post_id, '_movie_poster', $movie_poster );
     endif;
   endif;
 }

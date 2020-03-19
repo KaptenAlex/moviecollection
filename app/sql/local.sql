@@ -134,7 +134,7 @@ CREATE TABLE `wp_options` (
   PRIMARY KEY (`option_id`),
   UNIQUE KEY `option_name` (`option_name`),
   KEY `autoload` (`autoload`)
-) ENGINE=InnoDB AUTO_INCREMENT=552 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=554 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -258,7 +258,7 @@ INSERT INTO `wp_options` VALUES (112,'widget_tag_cloud','a:1:{s:12:\"_multiwidge
 INSERT INTO `wp_options` VALUES (113,'widget_nav_menu','a:3:{i:2;a:0:{}i:3;a:0:{}s:12:\"_multiwidget\";i:1;}','yes');
 INSERT INTO `wp_options` VALUES (114,'widget_custom_html','a:1:{s:12:\"_multiwidget\";i:1;}','yes');
 INSERT INTO `wp_options` VALUES (116,'recovery_keys','a:0:{}','yes');
-INSERT INTO `wp_options` VALUES (117,'_site_transient_update_core','O:8:\"stdClass\":4:{s:7:\"updates\";a:1:{i:0;O:8:\"stdClass\":10:{s:8:\"response\";s:6:\"latest\";s:8:\"download\";s:59:\"https://downloads.wordpress.org/release/wordpress-5.3.2.zip\";s:6:\"locale\";s:5:\"en_US\";s:8:\"packages\";O:8:\"stdClass\":5:{s:4:\"full\";s:59:\"https://downloads.wordpress.org/release/wordpress-5.3.2.zip\";s:10:\"no_content\";s:70:\"https://downloads.wordpress.org/release/wordpress-5.3.2-no-content.zip\";s:11:\"new_bundled\";s:71:\"https://downloads.wordpress.org/release/wordpress-5.3.2-new-bundled.zip\";s:7:\"partial\";b:0;s:8:\"rollback\";b:0;}s:7:\"current\";s:5:\"5.3.2\";s:7:\"version\";s:5:\"5.3.2\";s:11:\"php_version\";s:6:\"5.6.20\";s:13:\"mysql_version\";s:3:\"5.0\";s:11:\"new_bundled\";s:3:\"5.3\";s:15:\"partial_version\";s:0:\"\";}}s:12:\"last_checked\";i:1584612230;s:15:\"version_checked\";s:5:\"5.3.2\";s:12:\"translations\";a:0:{}}','no');
+INSERT INTO `wp_options` VALUES (117,'_site_transient_update_core','O:8:\"stdClass\":4:{s:7:\"updates\";a:1:{i:0;O:8:\"stdClass\":10:{s:8:\"response\";s:6:\"latest\";s:8:\"download\";s:59:\"https://downloads.wordpress.org/release/wordpress-5.3.2.zip\";s:6:\"locale\";s:5:\"en_US\";s:8:\"packages\";O:8:\"stdClass\":5:{s:4:\"full\";s:59:\"https://downloads.wordpress.org/release/wordpress-5.3.2.zip\";s:10:\"no_content\";s:70:\"https://downloads.wordpress.org/release/wordpress-5.3.2-no-content.zip\";s:11:\"new_bundled\";s:71:\"https://downloads.wordpress.org/release/wordpress-5.3.2-new-bundled.zip\";s:7:\"partial\";b:0;s:8:\"rollback\";b:0;}s:7:\"current\";s:5:\"5.3.2\";s:7:\"version\";s:5:\"5.3.2\";s:11:\"php_version\";s:6:\"5.6.20\";s:13:\"mysql_version\";s:3:\"5.0\";s:11:\"new_bundled\";s:3:\"5.3\";s:15:\"partial_version\";s:0:\"\";}}s:12:\"last_checked\";i:1584613621;s:15:\"version_checked\";s:5:\"5.3.2\";s:12:\"translations\";a:0:{}}','no');
 INSERT INTO `wp_options` VALUES (123,'theme_mods_twentytwenty','a:2:{s:18:\"custom_css_post_id\";i:-1;s:16:\"sidebars_widgets\";a:2:{s:4:\"time\";i:1583843582;s:4:\"data\";a:3:{s:19:\"wp_inactive_widgets\";a:0:{}s:9:\"sidebar-1\";a:3:{i:0;s:8:\"search-2\";i:1;s:14:\"recent-posts-2\";i:2;s:17:\"recent-comments-2\";}s:9:\"sidebar-2\";a:3:{i:0;s:10:\"archives-2\";i:1;s:12:\"categories-2\";i:2;s:6:\"meta-2\";}}}}','yes');
 INSERT INTO `wp_options` VALUES (141,'can_compress_scripts','1','no');
 INSERT INTO `wp_options` VALUES (144,'recently_activated','a:2:{s:33:\"get-movie-data/get-movie-data.php\";i:1584609482;s:19:\"Metabox/Metabox.php\";i:1584609480;}','yes');
@@ -270,7 +270,7 @@ INSERT INTO `wp_options` VALUES (167,'theme_mods_understrap-master','a:4:{s:28:\
 INSERT INTO `wp_options` VALUES (170,'theme_mods_understrap-master-child','a:7:{s:28:\"understrap_posts_index_style\";s:7:\"default\";s:27:\"understrap_sidebar_position\";s:5:\"right\";s:25:\"understrap_container_type\";s:9:\"container\";s:18:\"custom_css_post_id\";i:-1;s:18:\"nav_menu_locations\";a:1:{s:7:\"primary\";i:3;}s:11:\"custom_logo\";s:0:\"\";s:16:\"background_color\";s:6:\"000000\";}','yes');
 INSERT INTO `wp_options` VALUES (171,'current_theme','Understrap child','yes');
 INSERT INTO `wp_options` VALUES (172,'theme_switched','','yes');
-INSERT INTO `wp_options` VALUES (197,'fs_active_plugins','O:8:\"stdClass\":3:{s:7:\"plugins\";a:1:{s:24:\"kk-star-ratings/freemius\";O:8:\"stdClass\":4:{s:7:\"version\";s:5:\"2.3.0\";s:4:\"type\";s:6:\"plugin\";s:9:\"timestamp\";i:1584612470;s:11:\"plugin_path\";s:25:\"kk-star-ratings/index.php\";}}s:7:\"abspath\";s:59:\"C:\\Users\\Alexander\\Local Sites\\movie-collection\\app\\public/\";s:6:\"newest\";O:8:\"stdClass\":5:{s:11:\"plugin_path\";s:25:\"kk-star-ratings/index.php\";s:8:\"sdk_path\";s:24:\"kk-star-ratings/freemius\";s:7:\"version\";s:5:\"2.3.0\";s:13:\"in_activation\";b:0;s:9:\"timestamp\";i:1584612470;}}','yes');
+INSERT INTO `wp_options` VALUES (197,'fs_active_plugins','O:8:\"stdClass\":3:{s:7:\"plugins\";a:1:{s:24:\"kk-star-ratings/freemius\";O:8:\"stdClass\":4:{s:7:\"version\";s:5:\"2.3.0\";s:4:\"type\";s:6:\"plugin\";s:9:\"timestamp\";i:1584613640;s:11:\"plugin_path\";s:25:\"kk-star-ratings/index.php\";}}s:7:\"abspath\";s:59:\"C:\\Users\\Alexander\\Local Sites\\movie-collection\\app\\public/\";s:6:\"newest\";O:8:\"stdClass\":5:{s:11:\"plugin_path\";s:25:\"kk-star-ratings/index.php\";s:8:\"sdk_path\";s:24:\"kk-star-ratings/freemius\";s:7:\"version\";s:5:\"2.3.0\";s:13:\"in_activation\";b:0;s:9:\"timestamp\";i:1584613640;}}','yes');
 INSERT INTO `wp_options` VALUES (198,'fs_debug_mode','','yes');
 INSERT INTO `wp_options` VALUES (199,'fs_accounts','a:6:{s:21:\"id_slug_type_path_map\";a:1:{i:3890;a:3:{s:4:\"slug\";s:15:\"kk-star-ratings\";s:4:\"type\";s:6:\"plugin\";s:4:\"path\";s:25:\"kk-star-ratings/index.php\";}}s:11:\"plugin_data\";a:1:{s:15:\"kk-star-ratings\";a:17:{s:16:\"plugin_main_file\";O:8:\"stdClass\":1:{s:4:\"path\";s:25:\"kk-star-ratings/index.php\";}s:20:\"is_network_activated\";b:0;s:17:\"install_timestamp\";i:1583848183;s:16:\"sdk_last_version\";N;s:11:\"sdk_version\";s:5:\"2.3.0\";s:16:\"sdk_upgrade_mode\";b:1;s:18:\"sdk_downgrade_mode\";b:0;s:19:\"plugin_last_version\";N;s:14:\"plugin_version\";s:5:\"4.1.3\";s:19:\"plugin_upgrade_mode\";b:1;s:21:\"plugin_downgrade_mode\";b:0;s:21:\"is_plugin_new_install\";b:1;s:17:\"connectivity_test\";a:6:{s:12:\"is_connected\";b:1;s:4:\"host\";s:21:\"moviecollection.local\";s:9:\"server_ip\";s:3:\"::1\";s:9:\"is_active\";b:1;s:9:\"timestamp\";i:1583848183;s:7:\"version\";s:5:\"4.1.3\";}s:17:\"was_plugin_loaded\";b:1;s:15:\"prev_is_premium\";b:0;s:16:\"uninstall_reason\";O:8:\"stdClass\":3:{s:2:\"id\";s:2:\"15\";s:4:\"info\";s:0:\"\";s:12:\"is_anonymous\";b:0;}s:12:\"is_anonymous\";a:3:{s:2:\"is\";b:1;s:9:\"timestamp\";i:1584551856;s:7:\"version\";s:5:\"4.1.3\";}}}s:13:\"file_slug_map\";a:1:{s:25:\"kk-star-ratings/index.php\";s:15:\"kk-star-ratings\";}s:7:\"plugins\";a:1:{s:15:\"kk-star-ratings\";O:9:\"FS_Plugin\":22:{s:16:\"parent_plugin_id\";N;s:5:\"title\";s:15:\"kk Star Ratings\";s:4:\"slug\";s:15:\"kk-star-ratings\";s:12:\"premium_slug\";s:23:\"kk-star-ratings-premium\";s:4:\"type\";s:6:\"plugin\";s:20:\"affiliate_moderation\";b:0;s:19:\"is_wp_org_compliant\";b:1;s:22:\"premium_releases_count\";N;s:4:\"file\";s:25:\"kk-star-ratings/index.php\";s:7:\"version\";s:5:\"4.1.3\";s:11:\"auto_update\";N;s:4:\"info\";N;s:10:\"is_premium\";b:0;s:14:\"premium_suffix\";s:9:\"(Premium)\";s:7:\"is_live\";b:1;s:9:\"bundle_id\";N;s:10:\"public_key\";s:32:\"pk_e6d3c068ac8b44274990af9fc9eeb\";s:10:\"secret_key\";N;s:2:\"id\";s:4:\"3890\";s:7:\"updated\";N;s:7:\"created\";N;s:22:\"\0FS_Entity\0_is_updated\";b:0;}}s:9:\"unique_id\";s:32:\"3a5fefdac0e01ff888e1a43a5282a0cb\";s:13:\"admin_notices\";a:1:{s:15:\"kk-star-ratings\";a:0:{}}}','yes');
 INSERT INTO `wp_options` VALUES (200,'fs_api_cache','a:0:{}','yes');
@@ -302,7 +302,7 @@ INSERT INTO `wp_options` VALUES (509,'_transient_timeout_plugin_slugs','15846990
 INSERT INTO `wp_options` VALUES (510,'_transient_plugin_slugs','a:3:{i:0;s:25:\"kk-star-ratings/index.php\";i:1;s:29:\"movie-plugin/movie-plugin.php\";i:2;s:31:\"query-monitor/query-monitor.php\";}','no');
 INSERT INTO `wp_options` VALUES (517,'_site_transient_timeout_theme_roots','1584608023','no');
 INSERT INTO `wp_options` VALUES (518,'_site_transient_theme_roots','a:6:{s:14:\"twentynineteen\";s:7:\"/themes\";s:15:\"twentyseventeen\";s:7:\"/themes\";s:13:\"twentysixteen\";s:7:\"/themes\";s:12:\"twentytwenty\";s:7:\"/themes\";s:23:\"understrap-master-child\";s:7:\"/themes\";s:17:\"understrap-master\";s:7:\"/themes\";}','no');
-INSERT INTO `wp_options` VALUES (551,'_transient_is_multi_author','0','yes');
+INSERT INTO `wp_options` VALUES (553,'_transient_is_multi_author','0','yes');
 /*!40000 ALTER TABLE `wp_options` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -321,7 +321,7 @@ CREATE TABLE `wp_postmeta` (
   PRIMARY KEY (`meta_id`),
   KEY `post_id` (`post_id`),
   KEY `meta_key` (`meta_key`(191))
-) ENGINE=InnoDB AUTO_INCREMENT=339 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=351 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -359,7 +359,7 @@ INSERT INTO `wp_postmeta` VALUES (48,22,'_wp_trash_meta_time','1583844300');
 INSERT INTO `wp_postmeta` VALUES (49,23,'_wp_trash_meta_status','publish');
 INSERT INTO `wp_postmeta` VALUES (50,23,'_wp_trash_meta_time','1583844388');
 INSERT INTO `wp_postmeta` VALUES (52,1,'_edit_lock','1583846691:1');
-INSERT INTO `wp_postmeta` VALUES (57,29,'_edit_lock','1584609429:1');
+INSERT INTO `wp_postmeta` VALUES (57,29,'_edit_lock','1584613645:1');
 INSERT INTO `wp_postmeta` VALUES (58,29,'_edit_last','1');
 INSERT INTO `wp_postmeta` VALUES (59,29,'imdb_id','tt8579674');
 INSERT INTO `wp_postmeta` VALUES (60,29,'_imdb_id','tt8579674');
@@ -588,6 +588,18 @@ INSERT INTO `wp_postmeta` VALUES (335,83,'_kksr_casts','1');
 INSERT INTO `wp_postmeta` VALUES (336,83,'_kksr_ratings','5');
 INSERT INTO `wp_postmeta` VALUES (337,83,'_kksr_avg','5');
 INSERT INTO `wp_postmeta` VALUES (338,83,'_kksr_ref','f528764d624db129b32c21fbca0cb8d6');
+INSERT INTO `wp_postmeta` VALUES (339,84,'_edit_lock','1584613551:1');
+INSERT INTO `wp_postmeta` VALUES (340,85,'_edit_lock','1584613707:1');
+INSERT INTO `wp_postmeta` VALUES (341,85,'_edit_last','1');
+INSERT INTO `wp_postmeta` VALUES (342,85,'_kksr_status','');
+INSERT INTO `wp_postmeta` VALUES (343,85,'_imdb_id','tt8946378');
+INSERT INTO `wp_postmeta` VALUES (344,85,'_movie_actors','Daniel Craig, Chris Evans, Ana de Armas, Jamie Lee Curtis');
+INSERT INTO `wp_postmeta` VALUES (345,85,'_movie_published','27 Nov 2019');
+INSERT INTO `wp_postmeta` VALUES (346,85,'_movie_poster','https://m.media-amazon.com/images/M/MV5BMGUwZjliMTAtNzAxZi00MWNiLWE2NzgtZGUxMGQxZjhhNDRiXkEyXkFqcGdeQXVyNjU1NzU3MzE@._V1_SX300.jpg');
+INSERT INTO `wp_postmeta` VALUES (347,85,'_kksr_casts','1');
+INSERT INTO `wp_postmeta` VALUES (348,85,'_kksr_ratings','3.5');
+INSERT INTO `wp_postmeta` VALUES (349,85,'_kksr_avg','3.5');
+INSERT INTO `wp_postmeta` VALUES (350,85,'_kksr_ref','f528764d624db129b32c21fbca0cb8d6');
 /*!40000 ALTER TABLE `wp_postmeta` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -627,7 +639,7 @@ CREATE TABLE `wp_posts` (
   KEY `type_status_date` (`post_type`,`post_status`,`post_date`,`ID`),
   KEY `post_parent` (`post_parent`),
   KEY `post_author` (`post_author`)
-) ENGINE=InnoDB AUTO_INCREMENT=84 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=86 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -649,7 +661,7 @@ INSERT INTO `wp_posts` VALUES (20,1,'2020-03-10 12:42:49','2020-03-10 12:42:49',
 INSERT INTO `wp_posts` VALUES (21,1,'2020-03-10 12:43:10','2020-03-10 12:43:10','{\n    \"blogdescription\": {\n        \"value\": \"Wordpress site for movies!\",\n        \"type\": \"option\",\n        \"user_id\": 1,\n        \"date_modified_gmt\": \"2020-03-10 12:43:10\"\n    }\n}','','','trash','closed','closed','','9d392e51-bd10-47fc-b21a-754a6ce36027','','','2020-03-10 12:43:10','2020-03-10 12:43:10','',0,'http://moviecollection.local/9d392e51-bd10-47fc-b21a-754a6ce36027/',0,'customize_changeset','',0);
 INSERT INTO `wp_posts` VALUES (22,1,'2020-03-10 12:45:00','2020-03-10 12:45:00','{\n    \"understrap-master-child::background_color\": {\n        \"value\": \"#ff0000\",\n        \"type\": \"theme_mod\",\n        \"user_id\": 1,\n        \"date_modified_gmt\": \"2020-03-10 12:45:00\"\n    }\n}','','','trash','closed','closed','','f5c4ec60-cae3-437e-8150-4444e3525f71','','','2020-03-10 12:45:00','2020-03-10 12:45:00','',0,'http://moviecollection.local/f5c4ec60-cae3-437e-8150-4444e3525f71/',0,'customize_changeset','',0);
 INSERT INTO `wp_posts` VALUES (23,1,'2020-03-10 12:46:28','2020-03-10 12:46:28','{\n    \"understrap-master-child::background_color\": {\n        \"value\": \"#ffffff\",\n        \"type\": \"theme_mod\",\n        \"user_id\": 1,\n        \"date_modified_gmt\": \"2020-03-10 12:46:28\"\n    }\n}','','','trash','closed','closed','','8cc3cb8c-f576-4326-ab55-5bf690fabc64','','','2020-03-10 12:46:28','2020-03-10 12:46:28','',0,'http://moviecollection.local/8cc3cb8c-f576-4326-ab55-5bf690fabc64/',0,'customize_changeset','',0);
-INSERT INTO `wp_posts` VALUES (29,1,'2020-03-10 13:30:22','2020-03-10 13:30:22','April 6th, 1917. As a regiment assembles to wage war deep in enemy territory, two soldiers are assigned to race against time and deliver a message that will stop 1,600 men from walking straight into a deadly trap.','1917','','publish','closed','closed','','1917','','','2020-03-19 09:19:22','2020-03-19 09:19:22','',0,'http://moviecollection.local/?post_type=movie&#038;p=29',0,'movie','',0);
+INSERT INTO `wp_posts` VALUES (29,1,'2020-03-10 13:30:22','2020-03-10 13:30:22','April 6th, 1917. As a regiment assembles to wage war deep in enemy territory, two soldiers are assigned to race against time and deliver a message that will stop 1,600 men from walking straight into a deadly trap.','1917','','publish','closed','closed','','1917','','','2020-03-19 10:27:25','2020-03-19 10:27:25','',0,'http://moviecollection.local/?post_type=movie&#038;p=29',0,'movie','',0);
 INSERT INTO `wp_posts` VALUES (30,1,'2020-03-10 13:46:22','2020-03-10 13:46:22','A young boy stumbles into a mysterious girl who floats down from the sky. The girl, Sheeta, was chased by pirates, army and government secret agents. In saving her life, they begin a high flying adventure that goes through all sorts of flying machines, eventually searching for Sheeta\'s identity in a floating castle of a lost civilization.','Castle in the Sky','','publish','closed','closed','','laputa-slottet-i-himlen','','','2020-03-19 08:39:39','2020-03-19 08:39:39','',0,'http://moviecollection.local/?post_type=movie&#038;p=30',0,'movie','',0);
 INSERT INTO `wp_posts` VALUES (33,1,'2020-03-13 14:08:08','2020-03-13 14:08:08','<!-- wp:paragraph -->\n<p>Welcome to WordPress. This is your first post. Edit or delete it, then start writing!</p>\n<!-- /wp:paragraph -->','Hello world!','','inherit','closed','closed','','1-revision-v1','','','2020-03-13 14:08:08','2020-03-13 14:08:08','',1,'http://moviecollection.local/1-revision-v1/',0,'revision','',0);
 INSERT INTO `wp_posts` VALUES (34,1,'2020-03-13 14:08:38','2020-03-13 14:08:38','A film about Natasha Romanoff in her quests between the films Civil War and Infinity War.','Black Widow','','publish','closed','closed','','black-widow','','','2020-03-19 08:40:58','2020-03-19 08:40:58','',0,'http://moviecollection.local/?post_type=movie&#038;p=34',0,'movie','',0);
@@ -686,6 +698,8 @@ INSERT INTO `wp_posts` VALUES (80,1,'2020-03-19 09:02:16','2020-03-19 09:02:16',
 INSERT INTO `wp_posts` VALUES (81,1,'2020-03-19 09:19:57','2020-03-19 09:19:57','A musician who has lost his passion for music is transported out of his body and must find his way back with the help of an infant soul learning about herself.','Soul','','publish','closed','closed','','a-2','','','2020-03-19 09:40:01','2020-03-19 09:40:01','',0,'http://moviecollection.local/?post_type=movie&#038;p=81',0,'movie','',0);
 INSERT INTO `wp_posts` VALUES (82,1,'2020-03-19 09:28:53','2020-03-19 09:28:53','In Gotham City, mentally troubled comedian Arthur Fleck is disregarded and mistreated by society. He then embarks on a downward spiral of revolution and bloody crime. This path brings him face-to-face with his alter-ego: the Joker.','Joker','','publish','closed','closed','','tt7286456','','','2020-03-19 09:28:54','2020-03-19 09:28:54','',0,'http://moviecollection.local/?post_type=movie&#038;p=82',0,'movie','',0);
 INSERT INTO `wp_posts` VALUES (83,1,'2020-03-19 10:09:35','2020-03-19 10:09:35','Early in World War II, an inexperienced U.S. Navy captain must lead an Allied convoy being stalked by Nazi U-boat wolfpacks.','Greyhound','','publish','closed','closed','','83','','','2020-03-19 10:09:36','2020-03-19 10:09:36','',0,'http://moviecollection.local/?post_type=movie&#038;p=83',0,'movie','',0);
+INSERT INTO `wp_posts` VALUES (84,1,'2020-03-19 10:28:06','0000-00-00 00:00:00','','Auto Draft','','auto-draft','closed','open','','','','','2020-03-19 10:28:06','0000-00-00 00:00:00','',0,'http://moviecollection.local/?p=84',0,'post','',0);
+INSERT INTO `wp_posts` VALUES (85,1,'2020-03-19 10:28:27','2020-03-19 10:28:27','A detective investigates the death of a patriarch of an eccentric, combative family.','Knives Out','','publish','closed','closed','','85','','','2020-03-19 10:28:27','2020-03-19 10:28:27','',0,'http://moviecollection.local/?post_type=movie&#038;p=85',0,'movie','',0);
 /*!40000 ALTER TABLE `wp_posts` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -903,4 +917,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-03-19 11:26:35
+-- Dump completed on 2020-03-19 11:29:36

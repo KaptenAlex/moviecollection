@@ -23,7 +23,7 @@ if ($topRatedQuery -> have_posts() ) :
       <?php if (!empty(get_post_meta(get_the_ID(), '_imdb_id', true))) : ?>
         <div class="imdb-icon"></div>
       <?php endif; ?>
-      <p>Rating: <?php echo round(get_post_meta(get_the_ID(), '_kksr_avg', true), 1); ?></p>
+      <p>Rating: <?php echo ( 2 * (round(get_post_meta(get_the_ID(), '_kksr_avg', true), 1) ) ); ?></p>
     </div>
     <?php
   endwhile;

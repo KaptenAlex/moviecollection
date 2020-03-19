@@ -19,7 +19,8 @@ if ($topRatedQuery -> have_posts() ) :
     <div class="movie-box">
       <h2><?php echo $iteration . '.'; ?></h2>
       <br>
-      <img class="movie-image" src="<?php echo get_the_post_thumbnail_url(); ?>" alt="Movie image">
+      <?php $movie_poster = esc_url( get_post_meta( $post->ID, '_movie_poster', true ) ); ?>
+      <img class="movie-image" src="<?php echo $movie_poster ?>" alt="Movie image">
       <a href="<?php echo get_post_permalink(); ?>">
         <h4 class="movie-link"><?php echo get_the_title(); ?></h4>
       </a>

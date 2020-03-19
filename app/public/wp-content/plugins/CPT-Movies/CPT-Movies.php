@@ -1,8 +1,8 @@
 <?php
 /*
-Plugin Name: CPT Movies
-Description: Custom Post Type of movies
-Version:     1.0
+Plugin Name: Movie plugin
+Description: This plugin contains Custom Post Type for Movies, Custom Meta box for IMDB IDs, Methods for fetching and saving data from OMDB API
+Version:     2.1
 Author:      Alexander Wilson
 */
 
@@ -71,5 +71,93 @@ function cptui_register_my_cpts_movie() {
 
 add_action( 'init', 'cptui_register_my_cpts_movie' );
 
+function add_custom_boxes()
+{
+        add_meta_box(
+            'imdb_box',               // Unique ID
+            'IMDB page',              // Box title
+            'custom_box_imdb',        // Content callback, must be of type callable
+            'movie'                   // Post type
+        );
+}
+add_action('add_meta_boxes', 'add_custom_boxes');
 
+//Custom box rendering and save functions for IMDB ID.
+function custom_box_imdb($post)
+{
+    //HTML for custom box in edit page.
+    $value = get_post_meta($post->ID, '_imdb_id', true);
+    ?>
+    <label for="_imdb_id">ID</label>
+    <br>
+    <input type="text" name="_imdb_id" id="_imdb_id" value="<?php echo $value; ?>">
+    <?php
+}
+
+function save_custom_box_imdb_data($post_id)
+{
+    //Save the value of the input into meta key _imdb_id
+    if (array_key_exists('_imdb_id', $_POST)) {
+        update_post_meta(
+            $post_id,
+            '_imdb_id',
+            $_POST['_imdb_id']
+        );
+    }
+}
+add_action('save_post', 'save_custom_box_imdb_data');
+
+//Functions for calling to OMDB API and saving it's content to a movies content and metaboxes.
+function get_movie_information($post_id)
+{
+  $movie_id = get_post_meta( $post_id, '_imdb_id', true );
+  $url = "http://www.omdbapi.com/?apikey=71784f0&i=$movie_id&plot=full";
+  $json_movie_information = file_get_contents($url);
+  $movie_information = json_decode($json_movie_information);
+  return $movie_information;
+}
+
+function update_movie_title_and_content( $post_id )
+{
+  $movie = get_movie_information( $post_id );
+  $movie_title = sanitize_text_field( $movie->Title );
+  $movie_plot = sanitize_text_field( $movie->Plot );
+
+  $update_movie = [
+    'ID'            => $post_id,
+    'post_title'    => $movie_title,
+    'post_content'  => $movie_plot,
+  ];
+  $IMDB_id = sanitize_text_field( $_POST["_imdb_id"] );
+  if ( !empty( $IMDB_id ) ) :
+    remove_action('save_post', 'update_movie_title_and_content');
+    wp_update_post( $update_movie );
+    add_action('save_post', 'update_movie_title_and_content');
+  endif;
+}
+add_action('save_post', 'update_movie_title_and_content');
+
+function update_actor_and_published_metadata($post_id)
+{
+  $movie = get_movie_information($post_id);
+
+  $IMDB_id = sanitize_text_field( $_POST["_imdb_id"] );
+  $IMDB_date = sanitize_text_field( $_POST["_movie_published"] );
+  $IMDB_actors = sanitize_text_field( $_POST["_movie_actors"] );
+  $IMDB_poster = esc_url( $_POST["_movie_poster"] );
+
+  $movie_released = sanitize_text_field( $movie->Released );
+  $movie_actors = sanitize_text_field( $movie->Actors );
+  $movie_imdb_ID = sanitize_text_field( $movie->imdbID );
+  $movie_poster = esc_url( $movie->Poster );
+
+  if ( !empty( $IMDB_id ) || $IMDB_id != $movie_imdb_ID ) :
+    if ($IMDB_date != $movie_released || $IMDB_actors != $movie_actors ) :
+      update_post_meta( $post_id, '_movie_actors', $movie_actors );
+      update_post_meta( $post_id, '_movie_published', $movie_released );
+      update_post_meta( $post_id, '_movie_poster', $movie_poster );
+    endif;
+  endif;
+}
+add_action( 'save_post', 'update_actor_and_published_metadata' );
  ?>
